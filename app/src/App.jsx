@@ -1,7 +1,13 @@
-export default function App() {
+import React from "react";
+import AboutUs from "./components/aboutus";
+
+function App() {
   return (
-    <div className="h-screen flex items-center justify-center bg-red-600">
-      <h1 className="text-white text-5xl font-bold">TAILWIND WORKING</h1>
+    <div>
+      {/* Other sections/components */}
+      <AboutUs />
     </div>
   );
 }
+
+export default App;

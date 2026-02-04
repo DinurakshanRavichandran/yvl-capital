@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/header"
+import Header from "../components/header";
 import TeamHero from "../components/teamhero";
 import TeamMember from "../components/team-members";
 import OperatingDNA from "../components/team-operatingdna";

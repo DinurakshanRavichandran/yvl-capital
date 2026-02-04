@@ -10,62 +10,94 @@ import TeamSection from "../components/team";
 import PartnerWithYVLCapital from "../components/cta";
 import Footer from "../components/footer";
 
+// This replaces the empty gaps with an active gold animation
+const SectionDivider = ({ animate = false }) => (
+  <div className="relative w-full max-w-7xl mx-auto px-6 h-px">
+    <div className="absolute inset-x-6 h-px bg-gradient-to-r from-transparent via-[#E8A147]/30 to-transparent">
+      {animate && (
+        <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-transparent via-[#E8A147] to-transparent animate-scan" />
+      )}
+    </div>
+    {/* Central gold node */}
+    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#E8A147] shadow-[0_0_8px_#E8A147]" />
+  </div>
+);
+
 const HomePage = () => {
   return (
-    <main className="min-h-screen bg-[#030210] selection:bg-[#D4AF37]/30 selection:text-[#D4AF37] overflow-x-hidden">
+    <main className="min-h-screen bg-[#030210] selection:bg-[#E8A147]/30 selection:text-[#E8A147] overflow-x-hidden">
       
-      {/* 1. GLOBAL BACKGROUND - Fixed position stays behind as you scroll */}
+      {/* 1. FIXED BACKGROUND OVERLAY */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-[-5%] right-[-5%] w-[70vw] h-[70vw] bg-[#D4AF37]/5 blur-[120px] rounded-full opacity-40" />
-        <div className="absolute top-[30%] left-[-10%] w-[60vw] h-[60vw] bg-white/[0.02] blur-[150px] rounded-full" />
-        <div className="absolute bottom-[-10%] right-[5%] w-[50vw] h-[50vw] bg-[#D4AF37]/5 blur-[100px] rounded-full opacity-60" />
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#E8A147]/05 blur-[120px] rounded-full" />
       </div>
 
-      {/* 2. FIXED HEADER */}
       <Header className="z-50" />
 
-      {/* 3. CONTENT FLOW */}
       <div className="relative z-10 flex flex-col">
-        <HeroSection />
+        {/* HERO: Reduced bottom padding */}
+        <div className="mb-0">
+          <HeroSection />
+        </div>
 
-        <section id="about" className="py-20 md:py-32">
+        <SectionDivider animate={true} />
+
+        {/* COMPACT CONTENT BLOCKS */}
+        <section id="about" className="py-12 md:py-16">
           <AboutUs />
         </section>
-        
-        <div className="max-w-7xl mx-auto w-full px-6">
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-        </div>
-        
-        <section id="why-us" className="py-20 md:py-32">
+
+        <SectionDivider />
+
+        <section id="why-us" className="py-12 md:py-16">
           <WhyUs />
         </section>
-        
-        <section id="focus" className="relative py-20 md:py-32">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(212,175,55,0.03)_0%,_transparent_70%)] pointer-events-none" />
+
+        <SectionDivider animate={true} />
+
+        <section id="focus" className="py-12 md:py-16">
           <WhatWeBack />
         </section>
 
-        <section id="investment" className="py-20 md:py-32">
+        <SectionDivider />
+
+        <section id="investment" className="py-12 md:py-16">
           <HowWeInvest />
         </section>
 
-        <div className="h-32 bg-gradient-to-b from-transparent to-[#030210]/50" />
-        
-        <section id="snapshot" className="py-20">
+        <SectionDivider animate={true} />
+
+        <section id="snapshot" className="py-12 md:py-16">
           <CapitalSnapshot />
         </section>
 
-        <section id="team" className="py-20 md:py-32">
+        <SectionDivider />
+
+        <section id="team" className="py-12 md:py-16">
           <TeamSection />
         </section>
 
-        <section id="contact" className="relative pt-32 pb-20">
-           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+        <SectionDivider animate={true} />
+
+        {/* CTA SECTION: Tighter transition to Footer */}
+        <section id="contact" className="pt-20 pb-10">
            <PartnerWithYVLCapital />
         </section>
 
         <Footer />
       </div>
+
+      {/* Animation for the gold line scan effect */}
+      <style jsx global>{`
+        @keyframes scan {
+          0% { transform: translateX(-100%); opacity: 0; }
+          50% { opacity: 1; }
+          100% { transform: translateX(1000%); opacity: 0; }
+        }
+        .animate-scan {
+          animation: scan 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+      `}</style>
     </main>
   );
 };

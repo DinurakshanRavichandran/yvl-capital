@@ -24,7 +24,7 @@ const Header = () => {
     { name: "Studio", href: "#studio", type: "hash" },
     { name: "Team", href: "/team", type: "route" },
     { name: "News", href: "#news", type: "hash" },
-    { name: "Contact", href: "#contact", type: "hash" },
+    { name: "Contact", href: "/contact", type: "route" },
   ];
 
   const handleNavClick = (e, link) => {

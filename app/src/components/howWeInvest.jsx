@@ -119,7 +119,7 @@
 // //     <section className="relative bg-[#020212] text-white py-24 px-6 overflow-hidden font-sans">
 // //       {/* Background Ambient Radial Glows */}
 // //       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-// //         <div className="absolute top-[15%] left-[10%] w-[800px] h-[500px] bg-[#D4AF37]/10 blur-[120px] rounded-full" />
+// //         <div className="absolute top-[15%] left-[10%] w-[800px] h-[500px] bg-[#E8A147]/10 blur-[120px] rounded-full" />
 // //         <div className="absolute bottom-[10%] right-[10%] w-[700px] h-[500px] bg-white/[0.05] blur-[100px] rounded-full" />
 // //       </div>
 
@@ -137,7 +137,7 @@
 // //           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 relative">
             
 // //             {/* Central Vertical Divider (Desktop Only) */}
-// //             <div className="hidden lg:block absolute left-1/2 top-10 bottom-10 w-px bg-gradient-to-b from-transparent via-[#D4AF37]/20 to-transparent -translate-x-1/2 pointer-events-none" />
+// //             <div className="hidden lg:block absolute left-1/2 top-10 bottom-10 w-px bg-gradient-to-b from-transparent via-[#E8A147]/20 to-transparent -translate-x-1/2 pointer-events-none" />
 
 // //             {investmentTracks.map((track, index) => (
 // //               /* 2. Individual Glass Panels */
@@ -160,7 +160,7 @@
 // //                 </p>
 
 // //                 {/* 4. Icon Container with Glass Border */}
-// //                 <div className="mb-10 p-5 bg-[#D4AF37]/5 rounded-[16px] border border-[#d4af37]/20 group-hover:scale-110 transition-transform duration-500 backdrop-blur-sm">
+// //                 <div className="mb-10 p-5 bg-[#E8A147]/5 rounded-[16px] border border-[#d4af37]/20 group-hover:scale-110 transition-transform duration-500 backdrop-blur-sm">
 // //                   {track.icon}
 // //                 </div>
 
@@ -223,7 +223,7 @@
 //     <section className="relative bg-[#020212] text-white py-24 px-6 overflow-hidden font-sans">
 //       {/* Background Ambient Radial Glows */}
 //       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-//         <div className="absolute top-[15%] left-[10%] w-[800px] h-[500px] bg-[#D4AF37]/10 blur-[120px] rounded-full" />
+//         <div className="absolute top-[15%] left-[10%] w-[800px] h-[500px] bg-[#E8A147]/10 blur-[120px] rounded-full" />
 //         <div className="absolute bottom-[10%] right-[10%] w-[700px] h-[500px] bg-white/[0.05] blur-[100px] rounded-full" />
 //       </div>
 
@@ -256,7 +256,7 @@
 //                 {track.subtitle}
 //               </p>
 
-//               <div className="mb-10 p-5 bg-[#D4AF37]/5 rounded-[16px] border border-[#d4af37]/20 group-hover:scale-110 transition-transform duration-500 backdrop-blur-sm">
+//               <div className="mb-10 p-5 bg-[#E8A147]/5 rounded-[16px] border border-[#d4af37]/20 group-hover:scale-110 transition-transform duration-500 backdrop-blur-sm">
 //                 {track.icon}
 //               </div>
 
@@ -314,10 +314,10 @@ const HowWeInvest = () => {
   ];
 
   return (
-    <section className="relative bg-[#030210] text-white py-32 px-6 overflow-hidden font-sans">
+    <section className="relative bg-[#0D1B2A] text-white py-32 px-6 overflow-hidden font-sans">
       {/* Background Ambient Depth */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="absolute top-[30%] left-[-5%] w-[600px] h-[600px] bg-[#D4AF37]/5 blur-[120px] rounded-full opacity-30" />
+        <div className="absolute top-[30%] left-[-5%] w-[600px] h-[600px] bg-[#E8A147]/5 blur-[120px] rounded-full opacity-30" />
         <div className="absolute bottom-0 right-[-10%] w-[800px] h-[600px] bg-white/[0.02] blur-[100px] rounded-full" />
       </div>
 

@@ -1,5 +1,4 @@
-import React from "react";
-import { Linkedin, Twitter, Mail } from "lucide-react";
+import { LinkedinIcon, X, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,34 +11,34 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-    { name: "Twitter", href: "https://twitter.com", icon: Twitter },
+    { name: "LinkedIn", href: "https://linkedin.com", icon: LinkedinIcon },
+    { name: "X", href: "https://x.com", icon: X },
     { name: "Email", href: "mailto:hello@yvl.capital", icon: Mail },
   ];
 
   return (
-    <footer className="relative bg-[#030210] text-white pt-24 pb-12 overflow-hidden">
+    <footer className="relative bg-[#0D1B2A] text-white pt-24 pb-12 overflow-hidden">
       {/* Background Ambient Glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#D4AF37]/8 blur-[180px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#E8A147]/8 blur-[180px] rounded-full pointer-events-none" />
 
       {/* Top Border Accent - Gold Gradient */}
-      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#E8A147]/40 to-transparent" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-12 pb-16 border-b border-[#D4AF37]/10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-12 pb-16 border-b border-[#E8A147]/10">
 
           {/* Logo & Description */}
           <div className="space-y-6 text-center lg:text-left">
             <a href="/" className="inline-flex items-center gap-3 group">
-              <span className="text-4xl font-serif font-bold tracking-tight text-[#D4AF37]">
+              <span className="text-4xl font-serif font-bold tracking-tight text-[#E8A147]">
                 YVL
               </span>
               <div className="flex flex-col items-start">
                 <span className="text-white/80 text-sm font-medium tracking-wider uppercase">
                   Capital
                 </span>
-                <span className="w-8 h-[1px] bg-[#D4AF37]/50 mt-1" />
+                <span className="w-8 h-[1px] bg-[#E8A147]/50 mt-1" />
               </div>
             </a>
 
@@ -56,7 +55,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-11 h-11 rounded-full border border-[#D4AF37]/20 bg-[#D4AF37]/5 flex items-center justify-center text-[#D4AF37]/60 hover:text-[#D4AF37] hover:border-[#D4AF37]/50 hover:bg-[#D4AF37]/10 transition-all duration-300"
+                  className="w-11 h-11 rounded-full border border-[#E8A147]/20 bg-[#E8A147]/5 flex items-center justify-center text-[#E8A147]/60 hover:text-[#E8A147] hover:border-[#E8A147]/50 hover:bg-[#E8A147]/10 transition-all duration-300"
                   aria-label={social.name}
                 >
                   <social.icon size={18} />
@@ -68,8 +67,8 @@ const Footer = () => {
           {/* Navigation Links */}
           <div className="text-center lg:text-left">
             <div className="flex items-center justify-center lg:justify-start gap-3 mb-6">
-              <span className="w-6 h-[1px] bg-[#D4AF37]" />
-              <h4 className="text-[11px] uppercase tracking-[0.3em] text-[#D4AF37] font-semibold">
+              <span className="w-6 h-[1px] bg-[#E8A147]" />
+              <h4 className="text-[11px] uppercase tracking-[0.3em] text-[#E8A147] font-semibold">
                 Navigation
               </h4>
             </div>
@@ -78,10 +77,10 @@ const Footer = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-white/50 text-[14px] hover:text-[#D4AF37] transition-colors duration-300 relative group"
+                  className="text-white/50 text-[14px] hover:text-[#E8A147] transition-colors duration-300 relative group"
                 >
                   {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#D4AF37]/50 group-hover:w-full transition-all duration-300" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#E8A147]/50 group-hover:w-full transition-all duration-300" />
                 </a>
               ))}
             </nav>
@@ -90,18 +89,18 @@ const Footer = () => {
           {/* Contact Info */}
           <div className="text-center lg:text-left">
             <div className="flex items-center justify-center lg:justify-start gap-3 mb-6">
-              <span className="w-6 h-[1px] bg-[#D4AF37]" />
-              <h4 className="text-[11px] uppercase tracking-[0.3em] text-[#D4AF37] font-semibold">
+              <span className="w-6 h-[1px] bg-[#E8A147]" />
+              <h4 className="text-[11px] uppercase tracking-[0.3em] text-[#E8A147] font-semibold">
                 Get in Touch
               </h4>
             </div>
             <div className="space-y-5">
               <a
                 href="mailto:hello@yvl.capital"
-                className="inline-flex items-center justify-center lg:justify-start gap-3 text-white/60 hover:text-[#D4AF37] transition-colors duration-300 group"
+                className="inline-flex items-center justify-center lg:justify-start gap-3 text-white/60 hover:text-[#E8A147] transition-colors duration-300 group"
               >
-                <span className="w-10 h-10 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center group-hover:border-[#D4AF37]/50 group-hover:bg-[#D4AF37]/20 transition-all duration-300">
-                  <Mail size={16} className="text-[#D4AF37]" />
+                <span className="w-10 h-10 rounded-full bg-[#E8A147]/10 border border-[#E8A147]/20 flex items-center justify-center group-hover:border-[#E8A147]/50 group-hover:bg-[#E8A147]/20 transition-all duration-300">
+                  <Mail size={16} className="text-[#E8A147]" />
                 </span>
                 <span className="text-[15px] font-medium">hello@yvl.capital</span>
               </a>
@@ -119,21 +118,21 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-10 flex flex-col sm:flex-row items-center justify-between gap-6">
           <p className="text-white/30 text-[12px] tracking-wide flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#D4AF37]/40" />
+            <span className="w-2 h-2 rounded-full bg-[#E8A147]/40" />
             &copy; {currentYear} YVL Capital. All rights reserved.
           </p>
 
           <div className="flex items-center gap-8">
             <a
               href="#privacy"
-              className="text-white/30 text-[12px] hover:text-[#D4AF37] transition-colors duration-300"
+              className="text-white/30 text-[12px] hover:text-[#E8A147] transition-colors duration-300"
             >
               Privacy Policy
             </a>
-            <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]/30" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#E8A147]/30" />
             <a
               href="#terms"
-              className="text-white/30 text-[12px] hover:text-[#D4AF37] transition-colors duration-300"
+              className="text-white/30 text-[12px] hover:text-[#E8A147] transition-colors duration-300"
             >
               Terms of Service
             </a>

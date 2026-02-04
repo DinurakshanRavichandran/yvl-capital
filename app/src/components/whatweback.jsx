@@ -104,10 +104,10 @@ const WhatWeBack = () => {
   ];
 
   return (
-    <section className="relative bg-[#030210] text-white py-24 px-6 overflow-hidden font-sans">
+    <section className="relative bg-[#0D1B2A] text-white py-24 px-6 overflow-hidden font-sans">
       {/* Background Depth Effects */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-[#D4AF37]/5 blur-[120px] rounded-full opacity-40" />
+        <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-[#E8A147]/5 blur-[120px] rounded-full opacity-40" />
         <div className="absolute bottom-[20%] left-[-5%] w-[500px] h-[500px] bg-white/[0.03] blur-[100px] rounded-full opacity-30" />
       </div>
 
@@ -136,7 +136,7 @@ const WhatWeBack = () => {
               <div className="absolute inset-0 rounded-[40px] pointer-events-none bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.05),_transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               {/* Icon Container with Floating Glass Effect */}
-              <div className="mb-10 p-5 bg-[#D4AF37]/5 rounded-[20px] border border-[#d4af37]/20 group-hover:scale-110 transition-transform duration-500 backdrop-blur-sm shadow-inner shadow-white/5">
+              <div className="mb-10 p-5 bg-[#E8A147]/5 rounded-[20px] border border-[#d4af37]/20 group-hover:scale-110 transition-transform duration-500 backdrop-blur-sm shadow-inner shadow-white/5">
                 {card.icon}
               </div>
               

@@ -2,7 +2,7 @@
 
 // const AboutX = () => {
 //   return (
-//     <section className="relative overflow-hidden py-[7vw] text-white bg-[#030210]">
+//     <section className="relative overflow-hidden py-[7vw] text-white bg-[#0D1B2A]">
 //       <div className="relative max-w-[1200px] mx-auto px-6 grid gap-[4vw] items-start lg:grid-cols-[1.05fr_0.95fr]">
 //         {/* LEFT */}
 //         <div className="space-y-4">
@@ -89,10 +89,10 @@ import React from "react";
 
 const AboutYVL = () => {
   return (
-    <section className="relative overflow-hidden py-24 text-white bg-[#030210] font-sans">
+    <section className="relative overflow-hidden py-24 text-white bg-[#0D1B2A] font-sans">
       {/* Background Ambient Glows */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="absolute top-[20%] left-[-10%] w-[600px] h-[600px] bg-[#D4AF37]/5 blur-[120px] rounded-full opacity-40" />
+        <div className="absolute top-[20%] left-[-10%] w-[600px] h-[600px] bg-[#E8A147]/5 blur-[120px] rounded-full opacity-40" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 grid gap-16 items-center lg:grid-cols-[1.1fr_0.9fr]">
@@ -100,15 +100,15 @@ const AboutYVL = () => {
         {/* LEFT: CONTENT AREA */}
         <div className="space-y-8">
           <p className="flex items-center gap-4 text-[11px] uppercase tracking-[0.4em] text-white/40 font-semibold">
-            <span className="block w-12 h-[1px] bg-gradient-to-r from-[#D4AF37] to-transparent"></span>
+            <span className="block w-12 h-[1px] bg-gradient-to-r from-[#E8A147] to-transparent"></span>
             About Us
           </p>
 
           <h2 className="font-serif font-medium text-[clamp(32px,5vw,56px)] leading-[1.1] tracking-tight">
             Building and backing{" "}
-            <span className="text-[#D4AF37] relative">
+            <span className="text-[#E8A147] relative">
               AI-native
-              <span className="absolute bottom-2 left-0 w-full h-[1px] bg-[#D4AF37]/30 blur-[1px]" />
+              <span className="absolute bottom-2 left-0 w-full h-[1px] bg-[#E8A147]/30 blur-[1px]" />
             </span>{" "}
             platforms for critical systems.
           </h2>
@@ -118,16 +118,16 @@ const AboutYVL = () => {
           </p>
 
           {/* Glass Progress/Focus Card */}
-          <div className="relative overflow-hidden bg-gradient-to-br from-white/[0.08] to-transparent border border-white/[0.12] rounded-[30px] p-8 max-w-[460px] shadow-[0_30px_60px_rgba(0,0,0,0.4)] transition-all duration-500 hover:border-[#D4AF37]/30 group">
+          <div className="relative overflow-hidden bg-gradient-to-br from-white/[0.08] to-transparent border border-white/[0.12] rounded-[30px] p-8 max-w-[460px] shadow-[0_30px_60px_rgba(0,0,0,0.4)] transition-all duration-500 hover:border-[#E8A147]/30 group">
             <div className="absolute inset-0 rounded-[30px] pointer-events-none border-t border-l border-white/10" />
             
             <div className="flex justify-between items-baseline mb-4 gap-4">
               <p className="text-lg font-serif text-white/90">Autonomy as Infrastructure</p>
-              <p className="text-sm font-bold text-[#D4AF37] tracking-widest">80%</p>
+              <p className="text-sm font-bold text-[#E8A147] tracking-widest">80%</p>
             </div>
             
             <div className="h-[3px] bg-white/10 rounded-full overflow-hidden relative">
-              <span className="block h-full bg-gradient-to-r from-[#D4AF37] to-[#D4AF37]/30 rounded-full w-[80%] transition-all duration-1000 group-hover:brightness-125"></span>
+              <span className="block h-full bg-gradient-to-r from-[#E8A147] to-[#E8A147]/30 rounded-full w-[80%] transition-all duration-1000 group-hover:brightness-125"></span>
             </div>
             
             <p className="mt-5 text-[14px] text-white/50 leading-relaxed font-light">
@@ -144,35 +144,35 @@ const AboutYVL = () => {
         <div className="relative space-y-12">
           <div className="grid grid-cols-2 gap-6 items-end">
             {/* Image Panel A: Abstract Tech/Dark Architecture */}
-            <div className="relative rounded-[40px] overflow-hidden border border-white/[0.1] shadow-2xl bg-[#030210] aspect-[4/5] group">
+            <div className="relative rounded-[40px] overflow-hidden border border-white/[0.1] shadow-2xl bg-[#0D1B2A] aspect-[4/5] group">
               <img
                 src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
                 alt="Intelligent Infrastructure"
                 className="w-full h-full object-cover grayscale opacity-60 group-hover:scale-110 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#030210] via-transparent to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] via-transparent to-transparent opacity-60" />
             </div>
 
             {/* Image Panel B: Geometric Industrial Precision */}
-            <div className="relative rounded-[40px] overflow-hidden border border-white/[0.1] shadow-2xl bg-[#030210] aspect-[4/6] group">
+            <div className="relative rounded-[40px] overflow-hidden border border-white/[0.1] shadow-2xl bg-[#0D1B2A] aspect-[4/6] group">
               <img
                 src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800"
                 alt="Modern Control Systems"
                 className="w-full h-full object-cover grayscale opacity-60 group-hover:scale-110 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#030210] via-transparent to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] via-transparent to-transparent opacity-60" />
             </div>
           </div>
 
           {/* REFINED STATEMENT BLOCK */}
           <div className="relative p-10 rounded-[40px] bg-gradient-to-br from-white/[0.05] to-transparent border border-white/[0.1] shadow-2xl overflow-hidden group">
             {/* Glowing gold accent bar */}
-            <div className="absolute top-0 left-10 w-20 h-[2px] bg-gradient-to-r from-[#D4AF37] to-transparent shadow-[0_0_15px_rgba(212,175,55,0.5)]" />
+            <div className="absolute top-0 left-10 w-20 h-[2px] bg-gradient-to-r from-[#E8A147] to-transparent shadow-[0_0_15px_rgba(212,175,55,0.5)]" />
             
             <div className="relative z-10 space-y-4">
               <p className="text-[clamp(18px,2.2vw,24px)] font-serif leading-[1.4] text-white/90">
                 Where autonomous systems meet <br />
-                <span className="text-[#D4AF37] font-medium italic">real-world constraints</span>,
+                <span className="text-[#E8A147] font-medium italic">real-world constraints</span>,
               </p>
               
               <div className="flex items-center gap-4">
@@ -183,17 +183,17 @@ const AboutYVL = () => {
 
               <p className="text-[clamp(18px,2.2vw,24px)] font-serif leading-[1.4] text-white/90">
                 we <span className="relative inline-block px-2">
-                   <span className="absolute inset-0 bg-[#D4AF37]/10 -rotate-1 rounded-md"></span>
-                   <span className="relative text-[#D4AF37] font-semibold">build and back</span>
+                   <span className="absolute inset-0 bg-[#E8A147]/10 -rotate-1 rounded-md"></span>
+                   <span className="relative text-[#E8A147] font-semibold">build and back</span>
                 </span> companies that define the <br />
-                <span className="text-white font-semibold underline decoration-[#D4AF37]/40 decoration-2 underline-offset-8">
+                <span className="text-white font-semibold underline decoration-[#E8A147]/40 decoration-2 underline-offset-8">
                   future of control.
                 </span>
               </p>
             </div>
 
             {/* Subtle background flare */}
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#D4AF37]/5 blur-[60px] rounded-full pointer-events-none" />
+            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#E8A147]/5 blur-[60px] rounded-full pointer-events-none" />
           </div>
         </div>
       </div>

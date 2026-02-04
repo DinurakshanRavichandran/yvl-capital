@@ -2,7 +2,7 @@
 
 // const CapitalSnapshot = () => {
 //   return (
-//     <div className="bg-[#030210] text-white">
+//     <div className="bg-[#0D1B2A] text-white">
 //       {/* ===============================
 //          Capital Snapshot (Top Section)
 //          =============================== */}
@@ -146,15 +146,15 @@ const CapitalSnapshot = () => {
   ];
 
   return (
-    <div className="bg-[#030210] text-white font-sans overflow-hidden">
+    <div className="bg-[#0D1B2A] text-white font-sans overflow-hidden">
       {/* ===============================
           Capital Snapshot (Top Section)
           =============================== */}
       <section className="relative max-w-7xl mx-auto px-6 pt-32 pb-20 text-center">
         {/* Ambient background glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#D4AF37]/5 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#E8A147]/5 blur-[120px] rounded-full pointer-events-none" />
 
-        <p className="text-[11px] uppercase tracking-[0.5em] text-[#D4AF37] mb-6 font-semibold">
+        <p className="text-[11px] uppercase tracking-[0.5em] text-[#E8A147] mb-6 font-semibold">
           Fund Strategy
         </p>
         
@@ -169,7 +169,7 @@ const CapitalSnapshot = () => {
         {/* Total Capital Highlight */}
         <div className="inline-block relative px-10 py-4 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-md mb-20 shadow-2xl">
            <div className="absolute inset-0 rounded-full border-t border-white/20 pointer-events-none" />
-           <span className="text-2xl md:text-3xl font-serif text-[#D4AF37] tracking-wider">$50M <span className="text-white/80 font-sans text-lg ml-2">Total Capital</span></span>
+           <span className="text-2xl md:text-3xl font-serif text-[#E8A147] tracking-wider">$50M <span className="text-white/80 font-sans text-lg ml-2">Total Capital</span></span>
         </div>
 
         {/* Timeline Visual */}
@@ -178,7 +178,7 @@ const CapitalSnapshot = () => {
           <div className="absolute top-1/2 left-0 w-full h-px -translate-y-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
           
           {/* Active Progress Shadow */}
-          <div className="absolute top-1/2 left-0 w-[65%] h-[2px] -translate-y-1/2 bg-gradient-to-r from-[#D4AF37]/0 via-[#D4AF37]/40 to-[#D4AF37]" />
+          <div className="absolute top-1/2 left-0 w-[65%] h-[2px] -translate-y-1/2 bg-gradient-to-r from-[#E8A147]/0 via-[#E8A147]/40 to-[#E8A147]" />
 
           {stages.map((stage, idx) => (
             <div 
@@ -186,13 +186,13 @@ const CapitalSnapshot = () => {
               className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 text-center group"
               style={{ left: stage.pos }}
             >
-              <span className="block text-[12px] font-bold tracking-[0.1em] uppercase mb-5 text-white/40 group-hover:text-[#D4AF37] transition-colors duration-300">
+              <span className="block text-[12px] font-bold tracking-[0.1em] uppercase mb-5 text-white/40 group-hover:text-[#E8A147] transition-colors duration-300">
                 {stage.label}
               </span>
               
               {/* Node */}
-              <div className="relative w-4 h-4 rounded-full bg-[#030210] border border-[#D4AF37] mx-auto group-hover:scale-125 transition-transform duration-500">
-                <div className="absolute inset-[3px] rounded-full bg-[#D4AF37] shadow-[0_0_15px_#D4AF37]" />
+              <div className="relative w-4 h-4 rounded-full bg-[#0D1B2A] border border-[#E8A147] mx-auto group-hover:scale-125 transition-transform duration-500">
+                <div className="absolute inset-[3px] rounded-full bg-[#E8A147] shadow-[0_0_15px_#E8A147]" />
               </div>
 
               <span className="block text-[13px] text-white/60 mt-5 font-serif italic whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-2 group-hover:translate-y-0">
@@ -211,12 +211,12 @@ const CapitalSnapshot = () => {
           {rationales.map((item, idx) => (
             <div 
               key={idx}
-              className="relative p-10 rounded-[35px] bg-gradient-to-br from-white/[0.06] to-transparent border border-white/[0.08] group hover:border-[#D4AF37]/30 transition-all duration-500"
+              className="relative p-10 rounded-[35px] bg-gradient-to-br from-white/[0.06] to-transparent border border-white/[0.08] group hover:border-[#E8A147]/30 transition-all duration-500"
             >
               {/* Specular edge light */}
               <div className="absolute inset-0 rounded-[35px] border-t border-l border-white/10 pointer-events-none" />
               
-              <div className="w-8 h-[1px] bg-[#D4AF37] mb-8 group-hover:w-16 transition-all duration-500" />
+              <div className="w-8 h-[1px] bg-[#E8A147] mb-8 group-hover:w-16 transition-all duration-500" />
               
               <h4 className="text-xl font-serif font-medium mb-4 text-white/90">
                 {item.title}
@@ -233,11 +233,11 @@ const CapitalSnapshot = () => {
       <div className="text-center pb-32">
         <a
           href="/investment-allocation"
-          className="group relative inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-white/40 hover:text-[#D4AF37] transition-colors duration-300"
+          className="group relative inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-white/40 hover:text-[#E8A147] transition-colors duration-300"
         >
           View Full Investment Allocation 
           <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
-          <div className="absolute -bottom-2 left-0 w-0 h-px bg-[#D4AF37]/40 group-hover:w-full transition-all duration-500" />
+          <div className="absolute -bottom-2 left-0 w-0 h-px bg-[#E8A147]/40 group-hover:w-full transition-all duration-500" />
         </a>
       </div>
     </div>

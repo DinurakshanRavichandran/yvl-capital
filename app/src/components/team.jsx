@@ -40,7 +40,7 @@
 //     <section className="relative bg-[#020212] text-white py-24 px-6 overflow-hidden font-sans">
 //       {/* Background Depth Glows */}
 //       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-//         <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#D4AF37]/5 blur-[120px] rounded-full opacity-50" />
+//         <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#E8A147]/5 blur-[120px] rounded-full opacity-50" />
 //       </div>
 
 //       <div className="max-w-7xl mx-auto relative z-10">
@@ -145,10 +145,10 @@ const TeamSection = () => {
   ];
 
   return (
-    <section className="relative bg-[#030210] text-white py-32 px-6 overflow-hidden font-sans">
+    <section className="relative bg-[#0D1B2A] text-white py-32 px-6 overflow-hidden font-sans">
       {/* Dynamic Background Glows */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="absolute top-[-10%] right-[10%] w-[600px] h-[600px] bg-[#D4AF37]/5 blur-[150px] rounded-full opacity-30" />
+        <div className="absolute top-[-10%] right-[10%] w-[600px] h-[600px] bg-[#E8A147]/5 blur-[150px] rounded-full opacity-30" />
         <div className="absolute bottom-[10%] left-[-5%] w-[500px] h-[500px] bg-white/[0.02] blur-[120px] rounded-full opacity-20" />
       </div>
 
@@ -156,7 +156,7 @@ const TeamSection = () => {
         {/* Header: Offset Layout */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-24 gap-8">
           <div className="max-w-2xl">
-            <p className="text-[11px] uppercase tracking-[0.5em] text-[#D4AF37] mb-6 font-semibold">
+            <p className="text-[11px] uppercase tracking-[0.5em] text-[#E8A147] mb-6 font-semibold">
               Leadership
             </p>
             <h2 className="text-5xl md:text-7xl font-serif font-medium tracking-tight leading-none">
@@ -176,7 +176,7 @@ const TeamSection = () => {
               className="group relative flex flex-col transition-all duration-700"
             >
               {/* Image Container: Vertical Aspect Ratio */}
-              <div className="relative aspect-[3/4] overflow-hidden rounded-[40px] border border-white/10 bg-[#0A0A0A] shadow-2xl transition-all duration-700 group-hover:border-[#D4AF37]/40 group-hover:translate-y-[-8px]">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-[40px] border border-white/10 bg-[#0A0A0A] shadow-2xl transition-all duration-700 group-hover:border-[#E8A147]/40 group-hover:translate-y-[-8px]">
                 <img
                   src={member.image}
                   alt={member.name}
@@ -184,11 +184,11 @@ const TeamSection = () => {
                 />
                 
                 {/* Gradient Scrim */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#030210] via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
                 {/* Name Overlay (Bottom of Image) */}
                 <div className="absolute bottom-8 left-8 right-8">
-                   <h3 className="text-2xl font-serif font-medium text-white group-hover:text-[#D4AF37] transition-colors duration-300">
+                   <h3 className="text-2xl font-serif font-medium text-white group-hover:text-[#E8A147] transition-colors duration-300">
                     {member.name}
                   </h3>
                   <p className="text-[10px] uppercase tracking-[0.2em] text-white/50 mt-1">
@@ -207,8 +207,8 @@ const TeamSection = () => {
                 </p>
                 
                 <div className="flex items-center gap-3">
-                  <div className="h-px w-4 bg-[#D4AF37]/50" />
-                  <p className="text-[#D4AF37]/60 text-[10px] uppercase tracking-widest font-medium">
+                  <div className="h-px w-4 bg-[#E8A147]/50" />
+                  <p className="text-[#E8A147]/60 text-[10px] uppercase tracking-widest font-medium">
                     {member.former}
                   </p>
                 </div>

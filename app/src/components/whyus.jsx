@@ -58,7 +58,7 @@
 //     <section className="relative overflow-hidden bg-[linear-gradient(180deg,#020212,#01010d)] text-white py-[clamp(56px,7vw,96px)]">
 //       {/* decorative gradients */}
 //       <div className="pointer-events-none absolute inset-0">
-//         <div className="absolute left-[18%] top-[22%] h-[520px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#D4AF37]/10 blur-3xl" />
+//         <div className="absolute left-[18%] top-[22%] h-[520px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#E8A147]/10 blur-3xl" />
 //         <div className="absolute left-[78%] top-[38%] h-[520px] w-[860px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/6 blur-3xl" />
 //       </div>
 
@@ -66,13 +66,13 @@
 //         {/* LEFT */}
 //         <div>
 //           <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.24em] text-white/50">
-//             <span className="h-px w-16 bg-gradient-to-r from-[#D4AF37] to-transparent" />
+//             <span className="h-px w-16 bg-gradient-to-r from-[#E8A147] to-transparent" />
 //             Why Choose Us
 //           </p>
 
 //           <h2 className="mb-7 font-serif text-[clamp(44px,5vw,72px)] font-medium leading-[1.03] tracking-[-0.02em]">
 //             Where Vision, Craft, and{" "}
-//             <span className="text-[#D4AF37] drop-shadow-[0_0_22px_rgba(212,175,55,0.14)]">
+//             <span className="text-[#E8A147] drop-shadow-[0_0_22px_rgba(212,175,55,0.14)]">
 //               Luxury
 //             </span>{" "}
 //             Align
@@ -108,7 +108,7 @@
 //           {cards.map((card, i) => (
 //             <div
 //               key={i}
-//               className="group relative flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-gradient-to-b from-white/5 to-white/[0.035] p-5 shadow-[0_18px_45px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.06)] transition hover:-translate-y-0.5 hover:border-[#D4AF37]/30 hover:bg-gradient-to-b hover:from-white/[0.075]"
+//               className="group relative flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-gradient-to-b from-white/5 to-white/[0.035] p-5 shadow-[0_18px_45px_rgba(0,0,0,0.42),inset_0_1px_0_rgba(255,255,255,0.06)] transition hover:-translate-y-0.5 hover:border-[#E8A147]/30 hover:bg-gradient-to-b hover:from-white/[0.075]"
 //             >
 //               {/* gold sheen */}
 //               <div className="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(460px_140px_at_20%_0%,rgba(212,175,55,0.10),transparent_60%)]" />
@@ -122,7 +122,7 @@
 //                 </p>
 //               </div>
 
-//               <div className="flex h-[62px] w-[62px] shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/30 bg-gradient-to-b from-[#D4AF37]/15 to-white/5 text-[#D4AF37] shadow-[0_14px_30px_rgba(0,0,0,0.35)]">
+//               <div className="flex h-[62px] w-[62px] shrink-0 items-center justify-center rounded-xl border border-[#E8A147]/30 bg-gradient-to-b from-[#E8A147]/15 to-white/5 text-[#E8A147] shadow-[0_14px_30px_rgba(0,0,0,0.35)]">
 //                 {card.icon}
 //               </div>
 //             </div>
@@ -190,10 +190,10 @@ const cards = [
 
 export default function WhySection() {
   return (
-    <section className="relative overflow-hidden bg-[#030210] text-white py-[clamp(56px,7vw,96px)] font-sans">
+    <section className="relative overflow-hidden bg-[#0D1B2A] text-white py-[clamp(56px,7vw,96px)] font-sans">
       {/* Decorative Ambient Glows */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[10%] top-[20%] h-[600px] w-[600px] rounded-full bg-[#D4AF37]/5 blur-[120px]" />
+        <div className="absolute left-[10%] top-[20%] h-[600px] w-[600px] rounded-full bg-[#E8A147]/5 blur-[120px]" />
         <div className="absolute right-[5%] bottom-[10%] h-[500px] w-[500px] rounded-full bg-white/[0.02] blur-[100px]" />
       </div>
 
@@ -201,15 +201,15 @@ export default function WhySection() {
         {/* LEFT CONTENT */}
         <div className="z-10">
           <p className="mb-6 flex items-center gap-4 text-[11px] uppercase tracking-[0.3em] text-white/40">
-            <span className="h-px w-12 bg-gradient-to-r from-[#D4AF37] to-transparent" />
+            <span className="h-px w-12 bg-gradient-to-r from-[#E8A147] to-transparent" />
             Why Choose Us
           </p>
 
           <h2 className="mb-8 font-serif text-[clamp(40px,4.5vw,64px)] font-medium leading-[1.1] tracking-tight">
             Where Vision, Craft, and{" "}
-            <span className="text-[#D4AF37] relative inline-block">
+            <span className="text-[#E8A147] relative inline-block">
               Luxury
-              <span className="absolute bottom-2 left-0 w-full h-[1px] bg-[#D4AF37]/30 blur-[1px]" />
+              <span className="absolute bottom-2 left-0 w-full h-[1px] bg-[#E8A147]/30 blur-[1px]" />
             </span>{" "}
             Align
           </h2>
@@ -229,7 +229,7 @@ export default function WhySection() {
                   key={i}
                   src={`https://images.unsplash.com/${id}?w=96&h=96&fit=crop&crop=faces`}
                   alt=""
-                  className="h-10 w-10 rounded-full border-2 border-[#030210] object-cover"
+                  className="h-10 w-10 rounded-full border-2 border-[#0D1B2A] object-cover"
                 />
               ))}
             </div>
@@ -244,7 +244,7 @@ export default function WhySection() {
           {cards.map((card, i) => (
             <div
               key={i}
-              className="group relative flex items-center justify-between gap-6 rounded-[32px] border border-white/[0.08] bg-gradient-to-b from-white/[0.04] to-transparent p-6 transition-all duration-500 hover:-translate-y-1 hover:border-[#D4AF37]/40 hover:bg-white/[0.06] shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
+              className="group relative flex items-center justify-between gap-6 rounded-[32px] border border-white/[0.08] bg-gradient-to-b from-white/[0.04] to-transparent p-6 transition-all duration-500 hover:-translate-y-1 hover:border-[#E8A147]/40 hover:bg-white/[0.06] shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
             >
               {/* Internal Specular Highlight (Rim Light) */}
               <div className="absolute inset-0 rounded-[32px] pointer-events-none bg-[radial-gradient(500px_200px_at_20%_0%,rgba(212,175,55,0.08),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -259,7 +259,7 @@ export default function WhySection() {
               </div>
 
               {/* Icon Container with Glass Detail */}
-              <div className="relative flex h-[64px] w-[64px] shrink-0 items-center justify-center rounded-2xl border border-white/[0.1] bg-white/[0.03] text-[#D4AF37] group-hover:border-[#D4AF37]/40 group-hover:bg-[#D4AF37]/10 transition-all duration-500 overflow-hidden">
+              <div className="relative flex h-[64px] w-[64px] shrink-0 items-center justify-center rounded-2xl border border-white/[0.1] bg-white/[0.03] text-[#E8A147] group-hover:border-[#E8A147]/40 group-hover:bg-[#E8A147]/10 transition-all duration-500 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-20" />
                 {card.icon}
               </div>

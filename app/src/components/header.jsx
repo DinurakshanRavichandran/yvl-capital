@@ -58,10 +58,11 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "py-4 bg-[#030210]/90 backdrop-blur-xl border-b border-[#E8A147]/10 shadow-2xl"
+          ? "py-4 bg-[#030210]/95 backdrop-blur-xl border-b border-[#E8A147]/10 shadow-2xl"
           : "py-6 bg-transparent"
       }`}
     >
+      {/* Top Accent Line */}
       <div
         className={`absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#E8A147]/30 to-transparent transition-opacity duration-500 ${
           isScrolled ? "opacity-100" : "opacity-0"
@@ -86,7 +87,7 @@ const Header = () => {
           </div>
         </a>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation with Gradient Underline */}
         <nav className="hidden xl:flex items-center gap-2">
           {navLinks.map((link) => (
             <a
@@ -96,19 +97,20 @@ const Header = () => {
               className="relative px-4 py-2 text-[11px] font-bold uppercase tracking-[0.25em] text-white/40 hover:text-[#E8A147] transition-all duration-300 group"
             >
               {link.name}
-              <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-[#E8A147] group-hover:w-1/2 transition-all duration-300" />
+              {/* Center-out Gradient Underline Animation */}
+              <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-gradient-to-r from-transparent via-[#E8A147] to-transparent group-hover:w-full transition-all duration-500" />
             </a>
           ))}
         </nav>
 
-        {/* REFINED CTA BUTTON */}
+        {/* REFINED CTA BUTTON - Keeping the original animation you loved */}
         <div className="hidden md:block">
           <a
             href="#contact"
             onClick={(e) => handleNavClick(e, { href: "#contact", type: "hash" })}
             className="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden rounded-full border border-[#E8A147]/30 transition-all duration-500 hover:border-[#E8A147]"
           >
-            {/* Background fill on hover */}
+            {/* Sliding Background fill */}
             <div className="absolute inset-0 bg-[#E8A147] translate-y-[101%] group-hover:translate-y-0 transition-transform duration-500 ease-out" />
             
             {/* Shine effect */}
@@ -126,7 +128,7 @@ const Header = () => {
           className={`xl:hidden relative w-10 h-10 flex items-center justify-center rounded-full border transition-all duration-300 ${
             isMobileMenuOpen
               ? "border-[#E8A147] bg-[#E8A147]/10 text-[#E8A147]"
-              : "border-white/10 text-white/50 hover:border-[#E8A147] hover:text-[#E8A147]"
+              : "border-white/10 text-white/50 hover:border-[#E8A147]"
           }`}
         >
           {isMobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
@@ -140,7 +142,7 @@ const Header = () => {
         }`}
       >
         <nav className="flex flex-col items-center gap-8 px-6">
-          {navLinks.map((link, index) => (
+          {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
@@ -150,12 +152,10 @@ const Header = () => {
               {link.name}
             </a>
           ))}
-          
           <div className="w-12 h-[1px] bg-[#E8A147]/20 my-2" />
-
-          {/* REFINED MOBILE BUTTON */}
           <a
-            href="mailto:hello@yvl.capital"
+            href="#contact"
+            onClick={(e) => handleNavClick(e, { href: "#contact", type: "hash" })}
             className="w-full max-w-[240px] text-center px-8 py-4 rounded-full border border-[#E8A147] text-[10px] font-black uppercase tracking-[0.3em] text-[#E8A147] hover:bg-[#E8A147] hover:text-[#030210] transition-all duration-500 shadow-[0_0_20px_rgba(232,161,71,0.15)]"
           >
             Get in Touch

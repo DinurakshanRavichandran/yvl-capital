@@ -314,7 +314,7 @@ const HowWeInvest = () => {
   ];
 
   return (
-    <section className="relative bg-[#0D1B2A] text-white py-32 px-6 overflow-hidden font-sans">
+    <section className="relative bg-[#030210] text-white py-32 px-6 overflow-hidden font-sans">
       {/* Background Ambient Depth */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-[30%] left-[-5%] w-[600px] h-[600px] bg-[#E8A147]/5 blur-[120px] rounded-full opacity-30" />

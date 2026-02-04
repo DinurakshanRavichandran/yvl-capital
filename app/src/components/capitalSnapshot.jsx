@@ -2,7 +2,7 @@
 
 // const CapitalSnapshot = () => {
 //   return (
-//     <div className="bg-[#0D1B2A] text-white">
+//     <div className="bg-[#030210] text-white">
 //       {/* ===============================
 //          Capital Snapshot (Top Section)
 //          =============================== */}
@@ -146,7 +146,7 @@ const CapitalSnapshot = () => {
   ];
 
   return (
-    <div className="bg-[#0D1B2A] text-white font-sans overflow-hidden">
+    <div className="bg-[#030210] text-white font-sans overflow-hidden">
       {/* ===============================
           Capital Snapshot (Top Section)
           =============================== */}
@@ -191,7 +191,7 @@ const CapitalSnapshot = () => {
               </span>
               
               {/* Node */}
-              <div className="relative w-4 h-4 rounded-full bg-[#0D1B2A] border border-[#E8A147] mx-auto group-hover:scale-125 transition-transform duration-500">
+              <div className="relative w-4 h-4 rounded-full bg-[#030210] border border-[#E8A147] mx-auto group-hover:scale-125 transition-transform duration-500">
                 <div className="absolute inset-[3px] rounded-full bg-[#E8A147] shadow-[0_0_15px_#E8A147]" />
               </div>
 

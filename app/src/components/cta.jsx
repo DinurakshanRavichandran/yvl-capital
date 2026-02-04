@@ -89,7 +89,7 @@ const PartnerWithYVLCapital = () => {
   ];
 
   return (
-    <section className="relative bg-[#0D1B2A] text-white py-32 px-6 overflow-hidden font-sans">
+    <section className="relative bg-[#030210] text-white py-32 px-6 overflow-hidden font-sans">
       {/* Background Ambient Glows */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-[40%] left-[-10%] w-[600px] h-[600px] bg-[#E8A147]/10 blur-[150px] rounded-full opacity-40" />
@@ -125,7 +125,7 @@ const PartnerWithYVLCapital = () => {
                   className="w-full h-full object-cover opacity-20 group-hover:opacity-40 group-hover:scale-105 transition-all duration-1000 grayscale group-hover:grayscale-0"
                 />
                 {/* Vignette Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] via-[#0D1B2A]/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#030210] via-[#030210]/80 to-transparent" />
               </div>
 
               {/* Content Layer */}
@@ -149,7 +149,7 @@ const PartnerWithYVLCapital = () => {
                   {/* Shine effect */}
                   <div className="absolute inset-0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
                   
-                  <span className="relative z-10 text-[#0D1B2A] font-bold text-[12px] uppercase tracking-[0.2em]">
+                  <span className="relative z-10 text-[#030210] font-bold text-[12px] uppercase tracking-[0.2em]">
                     {track.buttonText}
                   </span>
                 </button>

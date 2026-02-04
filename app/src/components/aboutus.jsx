@@ -2,7 +2,7 @@
 
 // const AboutX = () => {
 //   return (
-//     <section className="relative overflow-hidden py-[7vw] text-white bg-[#0D1B2A]">
+//     <section className="relative overflow-hidden py-[7vw] text-white bg-[#030210]">
 //       <div className="relative max-w-[1200px] mx-auto px-6 grid gap-[4vw] items-start lg:grid-cols-[1.05fr_0.95fr]">
 //         {/* LEFT */}
 //         <div className="space-y-4">
@@ -89,7 +89,7 @@ import React from "react";
 
 const AboutYVL = () => {
   return (
-    <section className="relative overflow-hidden py-24 text-white bg-[#0D1B2A] font-sans">
+    <section className="relative overflow-hidden py-24 text-white bg-[#030210] font-sans">
       {/* Background Ambient Glows */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-[20%] left-[-10%] w-[600px] h-[600px] bg-[#E8A147]/5 blur-[120px] rounded-full opacity-40" />
@@ -144,23 +144,23 @@ const AboutYVL = () => {
         <div className="relative space-y-12">
           <div className="grid grid-cols-2 gap-6 items-end">
             {/* Image Panel A: Abstract Tech/Dark Architecture */}
-            <div className="relative rounded-[40px] overflow-hidden border border-white/[0.1] shadow-2xl bg-[#0D1B2A] aspect-[4/5] group">
+            <div className="relative rounded-[40px] overflow-hidden border border-white/[0.1] shadow-2xl bg-[#030210] aspect-[4/5] group">
               <img
                 src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
                 alt="Intelligent Infrastructure"
                 className="w-full h-full object-cover grayscale opacity-60 group-hover:scale-110 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] via-transparent to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#030210] via-transparent to-transparent opacity-60" />
             </div>
 
             {/* Image Panel B: Geometric Industrial Precision */}
-            <div className="relative rounded-[40px] overflow-hidden border border-white/[0.1] shadow-2xl bg-[#0D1B2A] aspect-[4/6] group">
+            <div className="relative rounded-[40px] overflow-hidden border border-white/[0.1] shadow-2xl bg-[#030210] aspect-[4/6] group">
               <img
                 src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800"
                 alt="Modern Control Systems"
                 className="w-full h-full object-cover grayscale opacity-60 group-hover:scale-110 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] via-transparent to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#030210] via-transparent to-transparent opacity-60" />
             </div>
           </div>
 

@@ -2,7 +2,7 @@ import { ArrowRight, TrendingUp, Shield, Zap } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0D1B2A] pt-24 pb-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#030210] pt-24 pb-20">
       {/* Ambient Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Primary gold glow - top right */}
@@ -59,7 +59,7 @@ const Hero = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[#E8A147] to-[#D4893D] transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-            <span className="relative z-10 flex items-center gap-3 text-[12px] uppercase tracking-[0.2em] font-bold text-[#0D1B2A]">
+            <span className="relative z-10 flex items-center gap-3 text-[12px] uppercase tracking-[0.2em] font-bold text-[#030210]">
               Partner With Us
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </span>

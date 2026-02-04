@@ -145,7 +145,7 @@ const TeamSection = () => {
   ];
 
   return (
-    <section className="relative bg-[#0D1B2A] text-white py-32 px-6 overflow-hidden font-sans">
+    <section className="relative bg-[#030210] text-white py-32 px-6 overflow-hidden font-sans">
       {/* Dynamic Background Glows */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-[-10%] right-[10%] w-[600px] h-[600px] bg-[#E8A147]/5 blur-[150px] rounded-full opacity-30" />
@@ -184,7 +184,7 @@ const TeamSection = () => {
                 />
                 
                 {/* Gradient Scrim */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#030210] via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
                 {/* Name Overlay (Bottom of Image) */}
                 <div className="absolute bottom-8 left-8 right-8">

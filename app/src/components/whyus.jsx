@@ -190,7 +190,7 @@ const cards = [
 
 export default function WhySection() {
   return (
-    <section className="relative overflow-hidden bg-[#0D1B2A] text-white py-[clamp(56px,7vw,96px)] font-sans">
+    <section className="relative overflow-hidden bg-[#030210] text-white py-[clamp(56px,7vw,96px)] font-sans">
       {/* Decorative Ambient Glows */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[10%] top-[20%] h-[600px] w-[600px] rounded-full bg-[#E8A147]/5 blur-[120px]" />
@@ -229,7 +229,7 @@ export default function WhySection() {
                   key={i}
                   src={`https://images.unsplash.com/${id}?w=96&h=96&fit=crop&crop=faces`}
                   alt=""
-                  className="h-10 w-10 rounded-full border-2 border-[#0D1B2A] object-cover"
+                  className="h-10 w-10 rounded-full border-2 border-[#030210] object-cover"
                 />
               ))}
             </div>

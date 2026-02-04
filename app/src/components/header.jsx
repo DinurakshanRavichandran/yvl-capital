@@ -24,7 +24,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "py-4 bg-[#0D1B2A]/95 backdrop-blur-xl border-b border-[#E8A147]/10 shadow-[0_10px_40px_rgba(0,0,0,0.4)]"
+          ? "py-4 bg-[#030210]/95 backdrop-blur-xl border-b border-[#E8A147]/10 shadow-[0_10px_40px_rgba(0,0,0,0.4)]"
           : "py-6 bg-transparent"
       }`}
     >
@@ -75,7 +75,7 @@ const Header = () => {
             {/* Shine effect */}
             <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none rounded-full" />
 
-            <span className="relative z-10 text-[11px] uppercase tracking-[0.2em] font-bold text-[#E8A147] group-hover:text-[#0D1B2A] transition-colors duration-300">
+            <span className="relative z-10 text-[11px] uppercase tracking-[0.2em] font-bold text-[#E8A147] group-hover:text-[#030210] transition-colors duration-300">
               Get in Touch
             </span>
           </a>
@@ -96,7 +96,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-[#0D1B2A]/95 backdrop-blur-xl border-b border-[#E8A147]/10 overflow-hidden transition-all duration-500 ${
+        className={`md:hidden absolute top-full left-0 right-0 bg-[#030210]/95 backdrop-blur-xl border-b border-[#E8A147]/10 overflow-hidden transition-all duration-500 ${
           isMobileMenuOpen ? "max-h-[400px] py-8" : "max-h-0 py-0"
         }`}
       >
@@ -124,7 +124,7 @@ const Header = () => {
           <a
             href="mailto:hello@yvl.capital"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="relative px-10 py-4 bg-gradient-to-r from-[#E8A147] to-[#D4893D] rounded-full text-[11px] uppercase tracking-[0.2em] font-bold text-[#0D1B2A] hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all duration-300"
+            className="relative px-10 py-4 bg-gradient-to-r from-[#E8A147] to-[#D4893D] rounded-full text-[11px] uppercase tracking-[0.2em] font-bold text-[#030210] hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all duration-300"
           >
             Get in Touch
           </a>

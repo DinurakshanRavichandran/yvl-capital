@@ -1,4 +1,6 @@
 import React from "react";
+import Header from "./components/header";
+import Footer from "./components/footer";
 import AboutUs from "./components/aboutus";
 import WhyUs from "./components/whyus";
 import WhatWeBack from "./components/whatweback";
@@ -22,8 +24,11 @@ function App() {
         <div className="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] bg-[#D4AF37]/5 blur-[100px] rounded-full" />
       </div>
 
+      {/* HEADER */}
+      <Header />
+
       {/* COMPONENT FLOW */}
-      <div className="relative z-10">
+      <div className="relative z-10 pt-24">
         <AboutUs />
         
         {/* Subtle Separator: Soft Gold Fade */}
@@ -50,6 +55,9 @@ function App() {
            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent" />
            <PartnerWithYVLCapital />
         </section>
+
+        {/* FOOTER */}
+        <Footer />
       </div>
     </main>
   );

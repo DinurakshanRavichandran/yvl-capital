@@ -104,7 +104,7 @@ const WhatWeBack = () => {
   ];
 
   return (
-    <section className="relative bg-[#030210] text-white py-24 px-6 overflow-hidden font-sans">
+    <section className="relative bg-[#030210] text-white py-24 px-6 overflow-hidden ">
       {/* Background Depth Effects */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-[#E8A147]/5 blur-[120px] rounded-full opacity-40" />
@@ -119,7 +119,7 @@ const WhatWeBack = () => {
             What We Back
             <span className="w-8 h-px bg-[#d4af37]/30"></span>
           </h3>
-          <h2 className="text-xl md:text-3xl font-serif font-light max-w-3xl mx-auto leading-relaxed text-white/90">
+          <h2 className="text-xl md:text-3xl font-light max-w-3xl mx-auto leading-relaxed text-white/90">
             AI-native platforms that autonomously control mission-critical physical operations.
           </h2>
         </div>
@@ -140,7 +140,7 @@ const WhatWeBack = () => {
                 {card.icon}
               </div>
               
-              <h4 className="text-xl font-serif font-medium mb-5 text-white/95 tracking-wide">
+              <h4 className="text-xl font-medium mb-5 text-white/95 tracking-wide">
                 {card.title}
               </h4>
               

@@ -145,7 +145,7 @@ const TeamSection = () => {
   ];
 
   return (
-    <section className="relative bg-[#030210] text-white py-32 px-6 overflow-hidden font-sans">
+    <section className="relative bg-[#030210] text-white py-32 px-6 overflow-hidden ">
       {/* Dynamic Background Glows */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-[-10%] right-[10%] w-[600px] h-[600px] bg-[#E8A147]/5 blur-[150px] rounded-full opacity-30" />
@@ -159,7 +159,7 @@ const TeamSection = () => {
             <p className="text-[11px] uppercase tracking-[0.5em] text-[#E8A147] mb-6 font-semibold">
               Leadership
             </p>
-            <h2 className="text-5xl md:text-7xl font-serif font-medium tracking-tight leading-none">
+            <h2 className="text-5xl md:text-7xl font-medium tracking-tight leading-none">
               The Operators
             </h2>
           </div>
@@ -188,7 +188,7 @@ const TeamSection = () => {
 
                 {/* Name Overlay (Bottom of Image) */}
                 <div className="absolute bottom-8 left-8 right-8">
-                   <h3 className="text-2xl font-serif font-medium text-white group-hover:text-[#E8A147] transition-colors duration-300">
+                   <h3 className="text-2xl font-medium text-white group-hover:text-[#E8A147] transition-colors duration-300">
                     {member.name}
                   </h3>
                   <p className="text-[10px] uppercase tracking-[0.2em] text-white/50 mt-1">

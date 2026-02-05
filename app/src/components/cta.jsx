@@ -89,7 +89,7 @@ const PartnerWithYVLCapital = () => {
   ];
 
   return (
-    <section className="relative bg-[#030210] text-white py-32 px-6 overflow-hidden font-sans">
+    <section className="relative bg-[#030210] text-white py-32 px-6 overflow-hidden">
       {/* Background Ambient Glows */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-[40%] left-[-10%] w-[600px] h-[600px] bg-[#E8A147]/10 blur-[150px] rounded-full opacity-40" />

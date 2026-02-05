@@ -190,7 +190,7 @@ const cards = [
 
 export default function WhySection() {
   return (
-    <section className="relative overflow-hidden bg-[#030210] text-white py-[clamp(56px,7vw,96px)] font-sans">
+    <section className="relative overflow-hidden bg-[#030210] text-white py-[clamp(56px,7vw,96px)]">
       {/* Decorative Ambient Glows */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[10%] top-[20%] h-[600px] w-[600px] rounded-full bg-[#E8A147]/5 blur-[120px]" />
@@ -205,7 +205,7 @@ export default function WhySection() {
             Why Choose Us
           </p>
 
-          <h2 className="mb-8 font-serif text-[clamp(40px,4.5vw,64px)] font-medium leading-[1.1] tracking-tight">
+          <h2 className="mb-8 text-[clamp(40px,4.5vw,64px)] font-medium leading-[1.1] tracking-tight">
             Where Vision, Craft, and{" "}
             <span className="text-[#E8A147] relative inline-block">
               Luxury
@@ -250,7 +250,7 @@ export default function WhySection() {
               <div className="absolute inset-0 rounded-[32px] pointer-events-none bg-[radial-gradient(500px_200px_at_20%_0%,rgba(212,175,55,0.08),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="z-10">
-                <h3 className="mb-2 font-serif text-xl tracking-tight text-white/90 group-hover:text-white transition-colors">
+                <h3 className="mb-2 text-xl tracking-tight text-white/90 group-hover:text-white transition-colors">
                   {card.title}
                 </h3>
                 <p className="max-w-[42ch] text-white/50 text-[14px] leading-relaxed group-hover:text-white/70 transition-colors">

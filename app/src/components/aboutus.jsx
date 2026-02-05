@@ -89,7 +89,7 @@ import React from "react";
 
 const AboutYVL = () => {
   return (
-    <section className="relative overflow-hidden py-24 text-white bg-[#030210] font-sans">
+    <section className="relative overflow-hidden py-24 text-white bg-[#030210]">
       {/* Background Ambient Glows */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-[20%] left-[-10%] w-[600px] h-[600px] bg-[#E8A147]/5 blur-[120px] rounded-full opacity-40" />
@@ -104,7 +104,7 @@ const AboutYVL = () => {
             About Us
           </p>
 
-          <h2 className="font-serif font-medium text-[clamp(32px,5vw,56px)] leading-[1.1] tracking-tight">
+          <h2 className="font-medium text-[clamp(32px,5vw,56px)] leading-[1.1] tracking-tight">
             Building and backing{" "}
             <span className="text-[#E8A147] relative">
               AI-native

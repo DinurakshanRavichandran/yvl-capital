@@ -146,7 +146,7 @@ const CapitalSnapshot = () => {
   ];
 
   return (
-    <div className="bg-[#030210] text-white font-sans overflow-hidden">
+    <div className="bg-[#030210] text-white overflow-hidden">
       {/* ===============================
           Capital Snapshot (Top Section)
           =============================== */}
@@ -158,7 +158,7 @@ const CapitalSnapshot = () => {
           Fund Strategy
         </p>
         
-        <h2 className="text-[clamp(32px,5vw,52px)] font-serif font-medium mb-6 tracking-tight leading-tight">
+        <h2 className="text-[clamp(32px,5vw,52px)] font-medium mb-6 tracking-tight leading-tight">
           Capital Snapshot
         </h2>
 
@@ -169,7 +169,7 @@ const CapitalSnapshot = () => {
         {/* Total Capital Highlight */}
         <div className="inline-block relative px-10 py-4 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-md mb-20 shadow-2xl">
            <div className="absolute inset-0 rounded-full border-t border-white/20 pointer-events-none" />
-           <span className="text-2xl md:text-3xl font-serif text-[#E8A147] tracking-wider">$50M <span className="text-white/80 font-sans text-lg ml-2">Total Capital</span></span>
+           <span className="text-2xl md:text-3xl font-serif text-[#E8A147] tracking-wider">$50M <span className="text-white/80 text-lg ml-2">Total Capital</span></span>
         </div>
 
         {/* Timeline Visual */}

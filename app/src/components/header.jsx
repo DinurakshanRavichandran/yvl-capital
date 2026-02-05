@@ -21,7 +21,7 @@ const Header = () => {
     { name: "Home", href: "#home", type: "hash" },
     { name: "About", href: "/about", type: "route" },
     { name: "Thesis", href: "/thesis", type: "route" },
-    { name: "Allocation", href: "#allocation", type: "hash" },
+    { name: "Allocation", href: "/allocation", type: "route" },
     { name: "Studio", href: "/studio", type: "route" },
     { name: "Team", href: "/team", type: "route" },
     { name: "News", href: "#news", type: "hash" },

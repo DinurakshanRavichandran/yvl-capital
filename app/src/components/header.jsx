@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
+import Logo from "../assets/LOGO.png"
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -71,7 +72,7 @@ const Header = () => {
 
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a 
+        {/* <a 
           href="/" 
           onClick={(e) => { e.preventDefault(); navigate("/"); window.scrollTo({ top: 0, behavior: "smooth" }); }}
           className="flex items-center gap-3 group"
@@ -85,8 +86,20 @@ const Header = () => {
             </span>
             <span className="w-4 h-[1px] bg-[#E8A147]/50 group-hover:w-8 transition-all duration-300" />
           </div>
-        </a>
+        </a> */}
 
+         <a 
+          href="/" 
+          onClick={(e) => { e.preventDefault(); navigate("/"); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+          className="flex items-center group"
+        >
+        {/* Replaced text with your imported Logo image */}
+      <img 
+        src={Logo} 
+        alt="YVL Capital" 
+        className="h-8 md:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+      />
+    </a>
         {/* Desktop Navigation with Gradient Underline */}
         <nav className="hidden xl:flex items-center gap-2">
           {navLinks.map((link) => (

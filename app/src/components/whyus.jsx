@@ -137,8 +137,8 @@ import React from 'react';
 
 const cards = [
   {
-    title: "Premium Real Estate Consulting",
-    desc: "Personalized advisory for investors seeking long-term value in the luxury market.",
+    title: "Acute, Non-Negotiable Constraints",
+    desc: "Permanent resource shortages make autonomy essential, not optional, across critical infrastructure.",
     icon: (
       <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none">
         <path d="M4 10.5L12 4l8 6.5" stroke="currentColor" strokeWidth="1.6" />
@@ -148,8 +148,8 @@ const cards = [
     ),
   },
   {
-    title: "Unmatched Craftsmanship",
-    desc: "Attention to detail, from interiors to textures, ensuring perfection in every inch.",
+    title: "Governments as Accelerants",
+    desc: "Aligned policy, capital, and regulation enable rapid deployment of autonomous systems.",
     icon: (
       <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none">
         <path d="M14.5 6.5l3 3" stroke="currentColor" strokeWidth="1.6" />
@@ -159,8 +159,8 @@ const cards = [
     ),
   },
   {
-    title: "Prime Luxury Locations",
-    desc: "Exclusive neighborhoods for prestige, privacy, and beauty — every sunrise feels curated.",
+    title: "Technology Finally Caught Up",
+    desc: "Edge AI and sensors now make real-time autonomous control viable.",
     icon: (
       <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none">
         <path
@@ -171,21 +171,21 @@ const cards = [
       </svg>
     ),
   },
-  {
-    title: "Sustainable Innovation",
-    desc: "Luxury with smart systems, energy efficiency, and timeless materials.",
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none">
-        <path
-          d="M12 3c4.4 0 8 3.2 8 7.2 0 2.6-1.4 4.8-3.5 6.1-.8.5-1.5 1.4-1.7 2.3H9.2c-.2-.9-.9-1.8-1.7-2.3C5.4 15 4 12.8 4 10.2 4 6.2 7.6 3 12 3z"
-          stroke="currentColor"
-          strokeWidth="1.6"
-        />
-        <path d="M9 21h6" stroke="currentColor" strokeWidth="1.6" />
-        <path d="M9.5 18.5h5" stroke="currentColor" strokeWidth="1.6" />
-      </svg>
-    ),
-  },
+//   {
+//     title: "Sustainable Innovation",
+//     desc: "Luxury with smart systems, energy efficiency, and timeless materials.",
+//     icon: (
+//       <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none">
+//         <path
+//           d="M12 3c4.4 0 8 3.2 8 7.2 0 2.6-1.4 4.8-3.5 6.1-.8.5-1.5 1.4-1.7 2.3H9.2c-.2-.9-.9-1.8-1.7-2.3C5.4 15 4 12.8 4 10.2 4 6.2 7.6 3 12 3z"
+//           stroke="currentColor"
+//           strokeWidth="1.6"
+//         />
+//         <path d="M9 21h6" stroke="currentColor" strokeWidth="1.6" />
+//         <path d="M9.5 18.5h5" stroke="currentColor" strokeWidth="1.6" />
+//       </svg>
+//     ),
+//   },
 ];
 
 export default function WhySection() {
@@ -215,7 +215,7 @@ export default function WhySection() {
           </h2>
 
           <p className="text-white/50 text-lg font-light leading-relaxed max-w-lg mb-10">
-            We bridge the gap between architectural ambition and precise execution, ensuring every investment compounds in value.
+            Structural pressure, regulatory tailwinds, and sovereign-scale demand make MENA the proving ground for autonomous control.
           </p>
 
           <div className="flex items-center gap-5 p-4 rounded-full bg-white/[0.03] border border-white/[0.08] w-fit backdrop-blur-sm">

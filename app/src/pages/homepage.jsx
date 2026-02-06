@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/header";
 import HeroSection from "../components/hero";
 import AboutUs from "../components/aboutus";
 import WhyUs from "../components/whyus";
@@ -8,7 +7,6 @@ import HowWeInvest from "../components/howWeInvest";
 import CapitalSnapshot from "../components/capitalSnapshot";
 import TeamSection from "../components/team";
 import PartnerWithYVLCapital from "../components/cta";
-import Footer from "../components/footer";
 
 // This replaces the empty gaps with an active gold animation
 const SectionDivider = ({ animate = false }) => (
@@ -31,8 +29,6 @@ const HomePage = () => {
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#E8A147]/05 blur-[120px] rounded-full" />
       </div>
-
-      <Header className="z-50" />
 
       <div className="relative z-10 flex flex-col">
         {/* HERO: Reduced bottom padding */}
@@ -79,12 +75,10 @@ const HomePage = () => {
 
         <SectionDivider animate={true} />
 
-        {/* CTA SECTION: Tighter transition to Footer */}
+        {/* CTA SECTION: Tighter transition to bottom */}
         <section id="contact" className="pt-20 pb-10">
            <PartnerWithYVLCapital />
         </section>
-
-        <Footer />
       </div>
 
       {/* Animation for the gold line scan effect */}

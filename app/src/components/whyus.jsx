@@ -208,7 +208,7 @@ export default function WhySection() {
           <h2 className="mb-8 text-[clamp(40px,4.5vw,64px)] font-medium leading-[1.1] tracking-tight">
             Where Vision, Craft, and{" "}
             <span className="text-[#E8A147] relative inline-block">
-              Luxury
+              Talent
               <span className="absolute bottom-2 left-0 w-full h-[1px] bg-[#E8A147]/30 blur-[1px]" />
             </span>{" "}
             Align

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, briefcase, Target } from "lucide-react";
+import { ArrowUpRight, Target } from "lucide-react";
 
 const FinalCTA = () => {
   return (

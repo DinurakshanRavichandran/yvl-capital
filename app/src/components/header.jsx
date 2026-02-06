@@ -116,11 +116,11 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* REFINED CTA BUTTON - Keeping the original animation you loved */}
+        {/* REFINED CTA BUTTON - Keeping the original animation  */}
         <div className="hidden md:block">
           <a
-            href="#contact"
-            onClick={(e) => handleNavClick(e, { href: "#contact", type: "hash" })}
+            href="/contact"
+            onClick={(e) => handleNavClick(e, { href: "contact", type: "hash" })}
             className="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden rounded-full border border-[#E8A147]/30 transition-all duration-500 hover:border-[#E8A147]"
           >
             {/* Sliding Background fill */}
@@ -167,7 +167,7 @@ const Header = () => {
           ))}
           <div className="w-12 h-[1px] bg-[#E8A147]/20 my-2" />
           <a
-            href="#contact"
+            // href="#contact"
             onClick={(e) => handleNavClick(e, { href: "#contact", type: "hash" })}
             className="w-full max-w-[240px] text-center px-8 py-4 rounded-full border border-[#E8A147] text-[10px] font-black uppercase tracking-[0.3em] text-[#E8A147] hover:bg-[#E8A147] hover:text-[#030210] transition-all duration-500 shadow-[0_0_20px_rgba(232,161,71,0.15)]"
           >

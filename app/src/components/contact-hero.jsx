@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { TrendingUp, Activity, Globe, Zap } from "lucide-react";
+import { TrendingUp,Shield , Activity, Globe, Zap } from "lucide-react";
 
 const IntegratedHero = () => {
   return (
@@ -96,3 +96,5 @@ const IntegratedHero = () => {
     </section>
   );
 };
+
+export default IntegratedHero;

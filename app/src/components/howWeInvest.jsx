@@ -493,6 +493,7 @@
 
 import React from 'react';
 
+
 const HowWeInvest = () => {
   const investmentTracks = [
     {
@@ -500,7 +501,7 @@ const HowWeInvest = () => {
       subtitle: "Day Zero Creation",
       description: "We originate, build, and design companies using an autonomous infrastructure playbook.",
       buttonText: "Explore The Studio",
-      // Modern Architecture/Blueprint aesthetic
+      // Robotics/Automation Aesthetic
       image: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       icon: (
         <svg className="w-8 h-8 text-[#E8A147]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
@@ -513,7 +514,7 @@ const HowWeInvest = () => {
       subtitle: "Scaled Conviction",
       description: "We focus on operations that run continuously and cannot fail, creating infrastructure-level moats.",
       buttonText: "View Portfolio",
-      // Cyber/Infrastructure/Network aesthetic
+      // IoT / Network Aesthetic
       image: "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       icon: (
         <svg className="w-8 h-8 text-[#E8A147]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
@@ -527,18 +528,30 @@ const HowWeInvest = () => {
     <section className="relative bg-[#030210] text-white py-40 px-6 overflow-hidden">
       {/* Dynamic Ambient Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#E8A147]/5 blur-[160px] rounded-full animate-pulse" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[#E8A147]/5 blur-[160px] rounded-full animate-pulse" />
       </div>
 
       <div className="max-w-[1400px] mx-auto relative z-10">
+        
+        {/* RESTORED HEADER SECTION */}
+        <div className="text-center mb-24 animate-fade-up">
+          <h2 className="text-5xl md:text-6xl font-medium tracking-tight mb-6 bg-gradient-to-b from-white to-white/50 bg-clip-text text-transparent">
+            How We Invest
+          </h2>
+          <p className="max-w-2xl mx-auto text-white/40 text-lg font-light leading-relaxed">
+            A dual-track engine built to originate and scale the infrastructure 
+            of the next industrial era.
+          </p>
+        </div>
+
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           
-          {/* Left Pillar Image */}
-          <div className="hidden xl:block w-1/5 h-[600px] relative overflow-hidden rounded-[2rem] border border-white/10 opacity-40 hover:opacity-100 transition-opacity duration-1000 animate-slide-in-left">
+          {/* Left Pillar Image (Robotics) */}
+          <div className="hidden xl:block w-1/5 h-[600px] relative overflow-hidden rounded-[2.5rem] border border-white/10 opacity-30 hover:opacity-100 transition-opacity duration-1000 animate-slide-in-left">
             <img 
               src={investmentTracks[0].image} 
               className="absolute inset-0 w-full h-full object-cover grayscale brightness-50 animate-float-slow" 
-              alt="Studio Concept"
+              alt="Robotics"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#030210] via-transparent to-transparent" />
           </div>
@@ -549,7 +562,7 @@ const HowWeInvest = () => {
               <div 
                 key={index} 
                 className={`relative group p-10 w-full max-w-[340px] rounded-[40px] bg-[#080716]/80 backdrop-blur-md border border-white/[0.08] flex flex-col items-center text-center transition-all duration-700 hover:border-[#E8A147]/40 hover:-translate-y-4 animate-fade-up`}
-                style={{ animationDelay: `${index * 200}ms` }}
+                style={{ animationDelay: `${(index + 1) * 200}ms` }}
               >
                 {/* Internal Glow Effect */}
                 <div className="absolute inset-0 rounded-[40px] pointer-events-none bg-[radial-gradient(circle_at_50%_0%,rgba(232,161,71,0.05)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
@@ -562,7 +575,7 @@ const HowWeInvest = () => {
                   {track.icon}
                 </div>
 
-                <h3 className="text-2xl font-medium mb-4 text-white/90">
+                <h3 className="text-2xl font-medium mb-4 text-white/90 tracking-tight">
                   {track.title}
                 </h3>
 
@@ -580,12 +593,12 @@ const HowWeInvest = () => {
             ))}
           </div>
 
-          {/* Right Pillar Image */}
-          <div className="hidden xl:block w-1/5 h-[600px] relative overflow-hidden rounded-[2rem] border border-white/10 opacity-40 hover:opacity-100 transition-opacity duration-1000 animate-slide-in-right">
+          {/* Right Pillar Image (IoT) */}
+          <div className="hidden xl:block w-1/5 h-[600px] relative overflow-hidden rounded-[2.5rem] border border-white/10 opacity-30 hover:opacity-100 transition-opacity duration-1000 animate-slide-in-right">
             <img 
               src={investmentTracks[1].image} 
               className="absolute inset-0 w-full h-full object-cover grayscale brightness-50 animate-float-slow-reverse" 
-              alt="Capital Concept"
+              alt="IoT"
             />
             <div className="absolute inset-0 bg-gradient-to-l from-[#030210] via-transparent to-transparent" />
           </div>
@@ -608,11 +621,11 @@ const HowWeInvest = () => {
         }
         @keyframes slide-in-left {
           from { opacity: 0; transform: translateX(-50px); }
-          to { opacity: 0.4; transform: translateX(0); }
+          to { opacity: 0.3; transform: translateX(0); }
         }
         @keyframes slide-in-right {
           from { opacity: 0; transform: translateX(50px); }
-          to { opacity: 0.4; transform: translateX(0); }
+          to { opacity: 0.3; transform: translateX(0); }
         }
         
         .animate-float-slow { animation: float-slow 15s ease-in-out infinite; }

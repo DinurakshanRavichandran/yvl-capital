@@ -97,7 +97,8 @@ const Header = () => {
       <img 
         src={Logo} 
         alt="YVL Capital" 
-        className="h-8 md:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+        className="h-8 w-[120px] md:h-10 object-contain transition-transform duration-300 group-hover:scale-105"
+        loading="eager"
       />
     </a>
         {/* Desktop Navigation with Gradient Underline */}

@@ -129,32 +129,27 @@ const PartnerWithYVLCapital = () => {
       </section>
 
       {openModal && (
-  <div 
-    className="fixed inset-0 z-[9999] flex items-start justify-center pt-20 px-4 overflow-hidden"
-  >
-    {/* Blurred backdrop */}
-    <div
-      className="absolute inset-0 bg-black/80 backdrop-blur-xl"
-      onClick={() => setOpenModal(null)}
-    />
-
-    {/* Modal box */}
-    <div className="relative bg-[#030210] border border-white/10 rounded-3xl w-full max-w-5xl max-h-[85vh] overflow-y-auto p-8 z-50 shadow-2xl">
-      
-      {/* Close Button */}
-      <button
-        onClick={() => setOpenModal(null)}
-        className="absolute top-4 right-4 text-white/60 hover:text-[#E8A147] text-2xl"
-      >
-        ✕
-      </button>
-
-      {/* Modal Content */}
-      {openModal === "founder" && <FounderForm />}
-      {openModal === "lp" && <LPform />}
-    </div>
-  </div>
-)}
+        <div 
+          className="fixed inset-0 z-[9999] flex items-start justify-center pt-20 px-4 overflow-hidden"
+        >
+          <div
+            className="absolute inset-0 bg-black/80 backdrop-blur-xl"
+            onClick={() => setOpenModal(null)}
+          />
+          <div className="relative bg-[#030210] border border-white/10 rounded-3xl w-full max-w-5xl max-h-[85vh] overflow-y-auto p-8 z-50 shadow-2xl">
+            {/* I have added the x button instead of the back to home, i removed the back to home because if you click on the bg the modal will 
+            close automatically */}
+            <button
+              onClick={() => setOpenModal(null)}
+              className="absolute top-4 right-4 text-white/60 hover:text-[#E8A147] text-2xl"
+            >
+              ✕
+            </button>
+            {openModal === "founder" && <FounderForm />}
+            {openModal === "lp" && <LPform />}
+          </div>
+        </div>
+      )}
     </>
   );
 };

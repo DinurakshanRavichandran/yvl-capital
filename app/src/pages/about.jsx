@@ -490,6 +490,43 @@
 
 
 // Sections
+// import HeroSection from "../components/about-hero";
+// import WhoWeAreSection from "../components/about-whoWeAre";
+// import InvestmentGatesSection from "../components/about-InvestmentGates";
+// import WhyNowSection from "../components/about-whynowsection";
+// import HowWePartnerSection from "../components/about-howWePartner";
+// import AnchorSection from "../components/about-anchor";
+// import RegionalFocusSection from "../components/about-regionalfocus";
+// import StudioModelSection from "../components/about-studio";
+
+// const AboutPage = () => {
+//   return (
+//     <main className="min-h-screen bg-[#030210] selection:bg-[#E8A147]/30 selection:text-[#E8A147] overflow-x-hidden">
+//       {/* Global Background */}
+//       <div className="fixed inset-0 pointer-events-none z-0">
+//         <div className="absolute top-[-5%] right-[-5%] w-[70vw] h-[70vw] bg-[#E8A147]/5 blur-[120px] rounded-full opacity-40" />
+//         <div className="absolute top-[30%] left-[-10%] w-[60vw] h-[60vw] bg-white/[0.02] blur-[150px] rounded-full" />
+//         <div className="absolute bottom-[-10%] right-[5%] w-[50vw] h-[50vw] bg-[#E8A147]/5 blur-[100px] rounded-full opacity-60" />
+//       </div>
+
+//       <div className="relative z-10">
+//         <HeroSection />
+//         <WhoWeAreSection />
+//         <InvestmentGatesSection />
+//         <WhyNowSection />
+//         <HowWePartnerSection />
+//         <AnchorSection />
+//         <RegionalFocusSection />
+//         <StudioModelSection />
+//       </div>
+//     </main>
+//   );
+// };
+
+// export default AboutPage;
+
+import React from "react";
+import { motion } from "framer-motion";
 import HeroSection from "../components/about-hero";
 import WhoWeAreSection from "../components/about-whoWeAre";
 import InvestmentGatesSection from "../components/about-InvestmentGates";
@@ -499,25 +536,82 @@ import AnchorSection from "../components/about-anchor";
 import RegionalFocusSection from "../components/about-regionalfocus";
 import StudioModelSection from "../components/about-studio";
 
+// Animated, Theme-Matched Divider
+const SectionDivider = () => (
+  <div className="relative w-full flex justify-center py-12 md:py-20">
+    <div className="w-full max-w-6xl px-8 relative flex items-center justify-center">
+      
+      {/* Left Line Segment */}
+      <motion.div 
+        initial={{ scaleX: 0, originX: 1, opacity: 0 }}
+        whileInView={{ scaleX: 1, opacity: 1 }}
+        viewport={{ once: true, margin: "-10%" }}
+        transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+        className="flex-1 h-[1px] bg-gradient-to-r from-transparent to-[#E8A147]/40"
+      />
+
+      {/* Central "Origin" Point */}
+      <motion.div 
+        initial={{ scale: 0, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "backOut" }}
+        className="relative mx-4"
+      >
+        {/* Inner Glow */}
+        <div className="w-1.5 h-1.5 rounded-full bg-[#E8A147] shadow-[0_0_12px_#E8A147]" />
+        {/* Outer Ring */}
+        <div className="absolute inset-[-4px] border border-[#E8A147]/20 rounded-full scale-150 opacity-50" />
+      </motion.div>
+
+      {/* Right Line Segment */}
+      <motion.div 
+        initial={{ scaleX: 0, originX: 0, opacity: 0 }}
+        whileInView={{ scaleX: 1, opacity: 1 }}
+        viewport={{ once: true, margin: "-10%" }}
+        transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+        className="flex-1 h-[1px] bg-gradient-to-l from-transparent to-[#E8A147]/40"
+      />
+
+    </div>
+  </div>
+);
+
 const AboutPage = () => {
   return (
-    <main className="min-h-screen bg-[#030210] selection:bg-[#E8A147]/30 selection:text-[#E8A147] overflow-x-hidden">
-      {/* Global Background */}
+    <main className="min-h-screen bg-[#02010a] selection:bg-[#E8A147]/30 selection:text-[#E8A147] overflow-x-hidden">
+      {/* Global Background Depth */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-[-5%] right-[-5%] w-[70vw] h-[70vw] bg-[#E8A147]/5 blur-[120px] rounded-full opacity-40" />
-        <div className="absolute top-[30%] left-[-10%] w-[60vw] h-[60vw] bg-white/[0.02] blur-[150px] rounded-full" />
-        <div className="absolute bottom-[-10%] right-[5%] w-[50vw] h-[50vw] bg-[#E8A147]/5 blur-[100px] rounded-full opacity-60" />
+        <div className="absolute bottom-[-10%] left-[-5%] w-[50vw] h-[50vw] bg-[#E8A147]/5 blur-[100px] rounded-full opacity-30" />
       </div>
 
       <div className="relative z-10">
         <HeroSection />
+        <SectionDivider />
+        
         <WhoWeAreSection />
+        <SectionDivider />
+        
         <InvestmentGatesSection />
+        <SectionDivider />
+        
         <WhyNowSection />
+        <SectionDivider />
+        
         <HowWePartnerSection />
+        <SectionDivider />
+        
         <AnchorSection />
+        <SectionDivider />
+        
         <RegionalFocusSection />
+        <SectionDivider />
+        
         <StudioModelSection />
+        
+        {/* Final Padding for Footer space */}
+        <div className="pb-24" />
       </div>
     </main>
   );

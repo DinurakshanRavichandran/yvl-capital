@@ -74,15 +74,205 @@
 // };
 
 // export default HeroCoreSection;
+// import React, { useRef, useState } from "react";
+// import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+// import { ShieldCheck, Database, Cpu, Zap, Globe, Activity, Terminal } from "lucide-react";
+
+// const HeroCoreSection = () => {
+//   const containerRef = useRef(null);
+//   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+//   // Mouse parallax effect
+//   const handleMouseMove = (e) => {
+//     const { clientX, clientY } = e;
+//     setMousePos({ x: clientX, y: clientY });
+//   };
+
+//   const containerVariants = {
+//     hidden: { opacity: 0 },
+//     visible: {
+//       opacity: 1,
+//       transition: { staggerChildren: 0.15, delayChildren: 0.3 },
+//     },
+//   };
+
+//   const itemVariants = {
+//     hidden: { y: 40, opacity: 0 },
+//     visible: { 
+//       y: 0, 
+//       opacity: 1, 
+//       transition: { duration: 1.2, ease: [0.19, 1, 0.22, 1] } 
+//     },
+//   };
+
+//   return (
+//     <section 
+//       ref={containerRef}
+//       onMouseMove={handleMouseMove}
+//       className="relative min-h-screen flex flex-col items-center justify-center pt-40 pb-40 overflow-hidden bg-[#02010a] selection:bg-[#E8A147]/40"
+//     >
+//       {/* 1. CINEMATIC BACKGROUND LAYER */}
+//       <div className="absolute inset-0 pointer-events-none select-none">
+//         {/* Grain Texture Overlay */}
+//         <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        
+//         {/* Dynamic Follower Glow */}
+//         <motion.div 
+//           animate={{ x: mousePos.x - 400, y: mousePos.y - 400 }}
+//           transition={{ type: "spring", damping: 50, stiffness: 200 }}
+//           className="absolute w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(232,161,71,0.08)_0%,transparent_70%)] blur-[120px]"
+//         />
+
+//         {/* Structural Watermark */}
+//         <div 
+//           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-serif text-[22vw] text-white/[0.01] whitespace-nowrap italic tracking-tighter"
+//           style={{ fontFamily: "'Hoefler Text', 'serif'" }}
+//         >
+//           Institutional Alpha
+//         </div>
+        
+//         {/* Vertical Rule system */}
+//         <div className="absolute inset-0 flex justify-around opacity-[0.05]">
+//           <div className="w-px h-full bg-gradient-to-b from-transparent via-white to-transparent" />
+//           <div className="w-px h-full bg-gradient-to-b from-transparent via-white to-transparent" />
+//           <div className="w-px h-full bg-gradient-to-b from-transparent via-white to-transparent" />
+//         </div>
+//       </div>
+
+//       <motion.div 
+//         variants={containerVariants}
+//         initial="hidden"
+//         whileInView="visible"
+//         viewport={{ once: true }}
+//         className="relative z-10 max-w-[1400px] mx-auto px-8"
+//       >
+//         {/* TOP META DATA */}
+//         <motion.div variants={itemVariants} className="flex flex-col items-center mb-20">
+//           <div className="flex items-center gap-6 mb-4">
+//             <span className="h-px w-12 bg-[#E8A147]" />
+//             <span className="font-sans text-[11px] uppercase tracking-[0.8em] text-[#E8A147] font-bold">
+//               Investment Mandate // v2.026
+//             </span>
+//             <span className="h-px w-12 bg-[#E8A147]" />
+//           </div>
+//           <div className="flex gap-10 text-white/20 font-sans text-[9px] uppercase tracking-[0.2em]">
+//             <span>Secured: True</span>
+//             <span>Focus: Mission Critical</span>
+//             <span>Alpha: Compounding</span>
+//           </div>
+//         </motion.div>
+
+//         {/* MAIN HEADLINE */}
+//         <div className="text-center mb-32">
+//           <motion.h1 
+//             variants={itemVariants}
+//             className="font-serif text-[clamp(54px,9vw,110px)] font-medium leading-[0.9] tracking-tighter text-white"
+//             style={{ fontFamily: "'Hoefler Text', 'serif'" }}
+//           >
+//             Autonomous Operational Control
+//             <br />
+//             <span className="italic text-[#E8A147] font-normal tracking-tight">
+//               in Eternal Industries
+//             </span>
+//           </motion.h1>
+          
+//           <motion.div 
+//             variants={itemVariants}
+//             className="mt-16 max-w-4xl mx-auto h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" 
+//           />
+          
+//           <motion.p 
+//             variants={itemVariants}
+//             className="font-sans text-white/80 text-2xl md:text-4xl font-extralight leading-[1.3] max-w-5xl mx-auto mt-16 tracking-tight"
+//           >
+//             Backing AI-native platforms that <span className="text-white font-medium italic underline decoration-[#E8A147]/50 underline-offset-8">govern civilization's spine</span>: where demand is permanent and downtime is existential.
+//           </motion.p>
+//         </div>
+
+//         {/* DUAL VECTOR CARDS - ASYMMETRIC */}
+//         <div className="grid lg:grid-cols-2 gap-px bg-white/10 mb-40 border-x border-y border-white/10 overflow-hidden">
+//           {/* Vector 01 */}
+//           <motion.div 
+//             variants={itemVariants}
+//             className="group relative p-16 bg-[#02010a] hover:bg-[#050414] transition-colors duration-700"
+//           >
+//             <div className="absolute top-8 right-8 text-[#E8A147]/20 font-serif italic text-6xl group-hover:text-[#E8A147]/40 transition-colors">01</div>
+//             <Cpu className="text-[#E8A147] mb-10" size={32} strokeWidth={1} />
+//             <h3 className="font-serif text-white text-3xl mb-6 italic tracking-wide">Infrastructure-as-Agent</h3>
+//             <p className="font-sans text-white/40 text-xl leading-relaxed font-light mb-10">
+//               We move beyond "software aids" into systems that own the transaction. Platforms that govern food production, hydro-logics, and industrial throughput autonomously.
+//             </p>
+//             <div className="flex gap-4">
+//               <span className="w-2 h-2 rounded-full bg-[#E8A147] animate-pulse" />
+//               <span className="font-sans text-[10px] uppercase tracking-widest text-white/30">System Integrity: Verified</span>
+//             </div>
+//           </motion.div>
+
+//           {/* Vector 02 */}
+//           <motion.div 
+//             variants={itemVariants}
+//             className="group relative p-16 bg-[#02010a] hover:bg-[#050414] transition-colors duration-700"
+//           >
+//             <div className="absolute top-8 right-8 text-[#E8A147]/20 font-serif italic text-6xl group-hover:text-[#E8A147]/40 transition-colors">02</div>
+//             <Terminal className="text-[#E8A147] mb-10" size={32} strokeWidth={1} />
+//             <h3 className="font-serif text-white text-3xl mb-6 italic tracking-wide">Regulatory Embedding</h3>
+//             <p className="font-sans text-white/40 text-xl leading-relaxed font-light mb-10">
+//               Defensibility isn't just code; it's compliance. We invest in platforms that become the regulatory and financial standard for the industries they control.
+//             </p>
+//             <div className="flex gap-4">
+//               <div className="px-3 py-1 border border-white/10 rounded-full font-sans text-[9px] text-white/40 group-hover:border-[#E8A147]/30 transition-colors">High Defensibility</div>
+//               <div className="px-3 py-1 border border-white/10 rounded-full font-sans text-[9px] text-white/40 group-hover:border-[#E8A147]/30 transition-colors">Physical Integration</div>
+//             </div>
+//           </motion.div>
+//         </div>
+
+//         {/* FINAL MANIFESTO BOX */}
+//         <motion.div 
+//           variants={itemVariants}
+//           className="relative max-w-6xl mx-auto"
+//         >
+//           <div className="glass p-20 md:p-32 rounded-[2px] border border-white/10 relative overflow-hidden group">
+//              {/* Corner Scanners */}
+//             <div className="absolute top-0 left-0 w-[100px] h-px bg-gradient-to-r from-[#E8A147] to-transparent" />
+//             <div className="absolute top-0 left-0 h-[100px] w-px bg-gradient-to-b from-[#E8A147] to-transparent" />
+            
+//             <div className="relative z-10">
+//               <motion.div 
+//                 whileHover={{ rotate: 90 }}
+//                 className="mb-12 inline-block border border-[#E8A147]/40 p-4 rounded-full"
+//               >
+//                 <Activity className="text-[#E8A147]" size={24} />
+//               </motion.div>
+              
+//               <h2 
+//                 className="font-serif text-4xl md:text-6xl text-white leading-tight"
+//                 style={{ fontFamily: "'Hoefler Text', 'serif'" }}
+//               >
+//                 “YVL invests where AI is <span className="text-[#E8A147] italic">infrastructure, not a feature</span>—controlling operations that cannot fail, in industries that will never disappear.”
+//               </h2>
+              
+//               <div className="mt-20 font-sans text-[11px] uppercase tracking-[0.5em] text-white/20 flex items-center justify-between">
+//                 <span>// End Briefing</span>
+//                 <span>Established 2026</span>
+//               </div>
+//             </div>
+//           </div>
+//         </motion.div>
+//       </motion.div>
+//     </section>
+//   );
+// };
+
+// export default HeroCoreSection;
+
 import React, { useRef, useState } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { ShieldCheck, Database, Cpu, Zap, Globe, Activity, Terminal } from "lucide-react";
+import { motion } from "framer-motion";
+import { Cpu, Activity, Terminal } from "lucide-react";
 
 const HeroCoreSection = () => {
   const containerRef = useRef(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
-  // Mouse parallax effect
   const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
     setMousePos({ x: clientX, y: clientY });
@@ -92,16 +282,16 @@ const HeroCoreSection = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.3 },
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
     },
   };
 
   const itemVariants = {
-    hidden: { y: 40, opacity: 0 },
+    hidden: { y: 30, opacity: 0 },
     visible: { 
       y: 0, 
       opacity: 1, 
-      transition: { duration: 1.2, ease: [0.19, 1, 0.22, 1] } 
+      transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } 
     },
   };
 
@@ -109,33 +299,23 @@ const HeroCoreSection = () => {
     <section 
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen flex flex-col items-center justify-center pt-40 pb-40 overflow-hidden bg-[#02010a] selection:bg-[#E8A147]/40"
+      className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-40 overflow-hidden bg-[#02010a] selection:bg-[#E8A147]/40"
     >
-      {/* 1. CINEMATIC BACKGROUND LAYER */}
+      {/* BACKGROUND ELEMENTS */}
       <div className="absolute inset-0 pointer-events-none select-none">
-        {/* Grain Texture Overlay */}
         <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         
-        {/* Dynamic Follower Glow */}
         <motion.div 
           animate={{ x: mousePos.x - 400, y: mousePos.y - 400 }}
           transition={{ type: "spring", damping: 50, stiffness: 200 }}
-          className="absolute w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(232,161,71,0.08)_0%,transparent_70%)] blur-[120px]"
+          className="absolute w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(232,161,71,0.06)_0%,transparent_70%)] blur-[120px]"
         />
 
-        {/* Structural Watermark */}
         <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-serif text-[22vw] text-white/[0.01] whitespace-nowrap italic tracking-tighter"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-serif text-[18vw] text-white/[0.01] whitespace-nowrap italic tracking-[ -0.05em]"
           style={{ fontFamily: "'Hoefler Text', 'serif'" }}
         >
           Institutional Alpha
-        </div>
-        
-        {/* Vertical Rule system */}
-        <div className="absolute inset-0 flex justify-around opacity-[0.05]">
-          <div className="w-px h-full bg-gradient-to-b from-transparent via-white to-transparent" />
-          <div className="w-px h-full bg-gradient-to-b from-transparent via-white to-transparent" />
-          <div className="w-px h-full bg-gradient-to-b from-transparent via-white to-transparent" />
         </div>
       </div>
 
@@ -144,115 +324,114 @@ const HeroCoreSection = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="relative z-10 max-w-[1400px] mx-auto px-8"
+        className="relative z-10 max-w-7xl mx-auto px-8"
       >
-        {/* TOP META DATA */}
-        <motion.div variants={itemVariants} className="flex flex-col items-center mb-20">
-          <div className="flex items-center gap-6 mb-4">
-            <span className="h-px w-12 bg-[#E8A147]" />
-            <span className="font-sans text-[11px] uppercase tracking-[0.8em] text-[#E8A147] font-bold">
-              Investment Mandate // v2.026
+        {/* TOP META DATA - REFINED TRACKING */}
+        <motion.div variants={itemVariants} className="flex flex-col items-center mb-24">
+          <div className="flex items-center gap-6 mb-5">
+            <span className="h-[1px] w-8 bg-[#E8A147]/40" />
+            <span className="font-sans text-[10px] uppercase tracking-[0.6em] text-[#E8A147] font-bold">
+              Mandate // 2.026
             </span>
-            <span className="h-px w-12 bg-[#E8A147]" />
+            <span className="h-[1px] w-8 bg-[#E8A147]/40" />
           </div>
-          <div className="flex gap-10 text-white/20 font-sans text-[9px] uppercase tracking-[0.2em]">
-            <span>Secured: True</span>
+          <div className="flex gap-8 text-white/30 font-mono text-[9px] uppercase tracking-[0.2em]">
+            <span className="flex items-center gap-2"><div className="w-1 h-1 bg-[#E8A147] rounded-full" /> Secured</span>
             <span>Focus: Mission Critical</span>
             <span>Alpha: Compounding</span>
           </div>
         </motion.div>
 
-        {/* MAIN HEADLINE */}
+        {/* MAIN HEADLINE - OPTICAL REFINEMENT */}
         <div className="text-center mb-32">
           <motion.h1 
             variants={itemVariants}
-            className="font-serif text-[clamp(54px,9vw,110px)] font-medium leading-[0.9] tracking-tighter text-white"
+            className="font-serif text-[clamp(44px,7.5vw,98px)] font-medium leading-[0.95] tracking-[-0.03em] text-white"
             style={{ fontFamily: "'Hoefler Text', 'serif'" }}
           >
             Autonomous Operational Control
             <br />
-            <span className="italic text-[#E8A147] font-normal tracking-tight">
+            <span className="italic text-[#E8A147] font-light tracking-tight">
               in Eternal Industries
             </span>
           </motion.h1>
           
           <motion.div 
             variants={itemVariants}
-            className="mt-16 max-w-4xl mx-auto h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" 
+            className="mt-14 max-w-2xl mx-auto h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" 
           />
           
           <motion.p 
             variants={itemVariants}
-            className="font-sans text-white/80 text-2xl md:text-4xl font-extralight leading-[1.3] max-w-5xl mx-auto mt-16 tracking-tight"
+            className="font-sans text-white/60 text-lg md:text-2xl font-light leading-[1.5] max-w-3xl mx-auto mt-14 tracking-tight"
           >
-            Backing AI-native platforms that <span className="text-white font-medium italic underline decoration-[#E8A147]/50 underline-offset-8">govern civilization's spine</span>: where demand is permanent and downtime is existential.
+            Backing AI-native platforms that <span className="text-white font-medium italic underline decoration-[#E8A147]/30 underline-offset-[10px]">govern civilization's spine</span>: where demand is permanent and downtime is existential.
           </motion.p>
         </div>
 
-        {/* DUAL VECTOR CARDS - ASYMMETRIC */}
-        <div className="grid lg:grid-cols-2 gap-px bg-white/10 mb-40 border-x border-y border-white/10 overflow-hidden">
+        {/* DUAL VECTOR CARDS - ARCHITECTURAL LOOK */}
+        <div className="grid lg:grid-cols-2 gap-px bg-white/10 mb-40 border border-white/10 overflow-hidden rounded-sm">
           {/* Vector 01 */}
           <motion.div 
             variants={itemVariants}
-            className="group relative p-16 bg-[#02010a] hover:bg-[#050414] transition-colors duration-700"
+            className="group relative p-12 md:p-16 bg-[#02010a] hover:bg-[#050414] transition-all duration-700"
           >
-            <div className="absolute top-8 right-8 text-[#E8A147]/20 font-serif italic text-6xl group-hover:text-[#E8A147]/40 transition-colors">01</div>
-            <Cpu className="text-[#E8A147] mb-10" size={32} strokeWidth={1} />
-            <h3 className="font-serif text-white text-3xl mb-6 italic tracking-wide">Infrastructure-as-Agent</h3>
-            <p className="font-sans text-white/40 text-xl leading-relaxed font-light mb-10">
-              We move beyond "software aids" into systems that own the transaction. Platforms that govern food production, hydro-logics, and industrial throughput autonomously.
+            <div className="absolute top-10 right-10 text-white/[0.03] font-serif italic text-7xl group-hover:text-[#E8A147]/10 transition-colors">01</div>
+            <Cpu className="text-[#E8A147] mb-10 opacity-80" size={28} strokeWidth={1} />
+            <h3 className="font-serif text-white text-2xl mb-5 italic tracking-wide">Infrastructure-as-Agent</h3>
+            <p className="font-sans text-white/40 text-base md:text-lg leading-relaxed font-light mb-10 max-w-md">
+              Moving beyond "software aids" into systems that own the transaction. Platforms that govern food production, hydro-logics, and industrial throughput.
             </p>
-            <div className="flex gap-4">
-              <span className="w-2 h-2 rounded-full bg-[#E8A147] animate-pulse" />
-              <span className="font-sans text-[10px] uppercase tracking-widest text-white/30">System Integrity: Verified</span>
+            <div className="flex items-center gap-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#E8A147] animate-pulse shadow-[0_0_8px_#E8A147]" />
+              <span className="font-mono text-[9px] uppercase tracking-widest text-white/40">Status: Verified</span>
             </div>
           </motion.div>
 
           {/* Vector 02 */}
           <motion.div 
             variants={itemVariants}
-            className="group relative p-16 bg-[#02010a] hover:bg-[#050414] transition-colors duration-700"
+            className="group relative p-12 md:p-16 bg-[#02010a] hover:bg-[#050414] transition-all duration-700"
           >
-            <div className="absolute top-8 right-8 text-[#E8A147]/20 font-serif italic text-6xl group-hover:text-[#E8A147]/40 transition-colors">02</div>
-            <Terminal className="text-[#E8A147] mb-10" size={32} strokeWidth={1} />
-            <h3 className="font-serif text-white text-3xl mb-6 italic tracking-wide">Regulatory Embedding</h3>
-            <p className="font-sans text-white/40 text-xl leading-relaxed font-light mb-10">
-              Defensibility isn't just code; it's compliance. We invest in platforms that become the regulatory and financial standard for the industries they control.
+            <div className="absolute top-10 right-10 text-white/[0.03] font-serif italic text-7xl group-hover:text-[#E8A147]/10 transition-colors">02</div>
+            <Terminal className="text-[#E8A147] mb-10 opacity-80" size={28} strokeWidth={1} />
+            <h3 className="font-serif text-white text-2xl mb-5 italic tracking-wide">Regulatory Embedding</h3>
+            <p className="font-sans text-white/40 text-base md:text-lg leading-relaxed font-light mb-10 max-w-md">
+              Defensibility is compliance. We invest in platforms that become the regulatory and financial standard for the industries they control.
             </p>
             <div className="flex gap-4">
-              <div className="px-3 py-1 border border-white/10 rounded-full font-sans text-[9px] text-white/40 group-hover:border-[#E8A147]/30 transition-colors">High Defensibility</div>
-              <div className="px-3 py-1 border border-white/10 rounded-full font-sans text-[9px] text-white/40 group-hover:border-[#E8A147]/30 transition-colors">Physical Integration</div>
+              <div className="px-4 py-1.5 border border-white/5 rounded-full font-mono text-[8px] text-white/30 group-hover:border-[#E8A147]/20 transition-colors">High Defensibility</div>
+              <div className="px-4 py-1.5 border border-white/5 rounded-full font-mono text-[8px] text-white/30 group-hover:border-[#E8A147]/20 transition-colors">Physical Integration</div>
             </div>
           </motion.div>
         </div>
 
-        {/* FINAL MANIFESTO BOX */}
+        {/* FINAL MANIFESTO BOX - MAX DENSITY */}
         <motion.div 
           variants={itemVariants}
-          className="relative max-w-6xl mx-auto"
+          className="relative max-w-5xl mx-auto"
         >
-          <div className="glass p-20 md:p-32 rounded-[2px] border border-white/10 relative overflow-hidden group">
-             {/* Corner Scanners */}
-            <div className="absolute top-0 left-0 w-[100px] h-px bg-gradient-to-r from-[#E8A147] to-transparent" />
-            <div className="absolute top-0 left-0 h-[100px] w-px bg-gradient-to-b from-[#E8A147] to-transparent" />
+          <div className="p-16 md:p-24 rounded-sm border border-white/10 bg-white/[0.01] backdrop-blur-3xl relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-16 h-[1px] bg-[#E8A147]" />
+            <div className="absolute top-0 left-0 h-16 w-[1px] bg-[#E8A147]" />
             
-            <div className="relative z-10">
+            <div className="relative z-10 text-center">
               <motion.div 
-                whileHover={{ rotate: 90 }}
-                className="mb-12 inline-block border border-[#E8A147]/40 p-4 rounded-full"
+                whileHover={{ scale: 1.1 }}
+                className="mb-10 inline-block border border-[#E8A147]/20 p-5 rounded-full"
               >
-                <Activity className="text-[#E8A147]" size={24} />
+                <Activity className="text-[#E8A147]" size={20} />
               </motion.div>
               
               <h2 
-                className="font-serif text-4xl md:text-6xl text-white leading-tight"
+                className="font-serif text-3xl md:text-5xl text-white leading-[1.3] max-w-3xl mx-auto"
                 style={{ fontFamily: "'Hoefler Text', 'serif'" }}
               >
                 “YVL invests where AI is <span className="text-[#E8A147] italic">infrastructure, not a feature</span>—controlling operations that cannot fail, in industries that will never disappear.”
               </h2>
               
-              <div className="mt-20 font-sans text-[11px] uppercase tracking-[0.5em] text-white/20 flex items-center justify-between">
-                <span>// End Briefing</span>
+              <div className="mt-16 pt-8 border-t border-white/5 font-mono text-[9px] uppercase tracking-[0.4em] text-white/20 flex items-center justify-between">
+                <span>Ref: Briefing_01</span>
                 <span>Established 2026</span>
               </div>
             </div>

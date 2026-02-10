@@ -34,7 +34,7 @@ const FounderPitchForm = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-[#02010a] flex flex-col items-center justify-center py-24 px-6 overflow-hidden">
+    <section className="relative min-h-screen bg-[#02010a] flex flex-col items-center justify-center py-24 px-6 overflow-hidden z-[999]">
       {/* Background Ambience */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-[radial-gradient(circle_at_50%_0%,_rgba(232,161,71,0.05)_0%,_transparent_70%)]" />
@@ -47,14 +47,14 @@ const FounderPitchForm = () => {
         animate="visible"
         className="relative z-10 w-full max-w-3xl"
       >
-        {/* Back Navigation */}
+        {/* Back Navigation
         <button 
-          onClick={() => navigate(-1)}
+          // onClick={() => navigate(-1)}
           className="group flex items-center gap-2 text-white/40 hover:text-[#E8A147] transition-colors mb-12 font-sans text-[10px] uppercase tracking-[0.3em] font-bold"
         >
           <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
           Back to Home
-        </button>
+        </button> */}
 
         {/* Header Block */}
         <div className="mb-12">

@@ -60,7 +60,7 @@ const IntegratedHero = () => {
 
         <h1 
           style={{ fontFamily: "'Hoefler Text', serif" }}
-          className="text-[clamp(40px,8vw,100px)] leading-[0.95] text-white tracking-tighter mb-8"
+          className="text-[clamp(40px,8vw,100px)] leading-[0.95] text-white tracking-tighter mb-8 font-serif"
         >
           Systemic Alpha <br />
           <span className="italic font-light text-[#E8A147]">Through Control</span>

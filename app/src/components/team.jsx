@@ -159,7 +159,7 @@ const TeamSection = () => {
             <p className="text-[11px] uppercase tracking-[0.5em] text-[#E8A147] mb-6 font-semibold">
               Leadership
             </p>
-            <h2 className="text-5xl md:text-7xl font-medium tracking-tight leading-none">
+            <h2 className="text-5xl md:text-7xl font-medium tracking-tight leading-none font-serif">
               The Operators
             </h2>
           </div>
@@ -188,7 +188,7 @@ const TeamSection = () => {
 
                 {/* Name Overlay (Bottom of Image) */}
                 <div className="absolute bottom-8 left-8 right-8">
-                   <h3 className="text-2xl font-medium text-white group-hover:text-[#E8A147] transition-colors duration-300">
+                   <h3 className="text-2xl font-medium text-white group-hover:text-[#E8A147] transition-colors duration-300 font-serif">
                     {member.name}
                   </h3>
                   <p className="text-[10px] uppercase tracking-[0.2em] text-white/50 mt-1">

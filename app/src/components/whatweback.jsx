@@ -114,12 +114,12 @@ const WhatWeBack = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-20">
-          <h3 className="text-[11px] uppercase tracking-[0.4em] text-[#d4af37] mb-6 font-semibold flex items-center justify-center gap-3">
+          <h3 className="text-[11px] uppercase tracking-[0.4em] text-[#d4af37] mb-6 font-semibold flex items-center justify-center gap-3 font-serif">
             <span className="w-8 h-px bg-[#d4af37]/30"></span>
             What We Back
             <span className="w-8 h-px bg-[#d4af37]/30"></span>
           </h3>
-          <h2 className="text-xl md:text-3xl font-light max-w-3xl mx-auto leading-relaxed text-white/90">
+          <h2 className="text-xl md:text-3xl font-light max-w-3xl mx-auto leading-relaxed text-white/90 font-serif">
             AI-native platforms that autonomously control mission-critical physical operations.
           </h2>
         </div>
@@ -140,7 +140,7 @@ const WhatWeBack = () => {
                 {card.icon}
               </div>
               
-              <h4 className="text-xl font-medium mb-5 text-white/95 tracking-wide">
+              <h4 className="text-xl font-medium mb-5 text-white/95 tracking-wide font-serif">
                 {card.title}
               </h4>
               

@@ -205,7 +205,7 @@ export default function WhySection() {
             Why Choose Us
           </p>
 
-          <h2 className="mb-8 text-[clamp(40px,4.5vw,64px)] font-medium leading-[1.1] tracking-tight">
+          <h2 className="mb-8 text-[clamp(40px,4.5vw,64px)] font-medium leading-[1.1] tracking-tight font-serif">
             Where Vision, Craft, and{" "}
             <span className="text-[#E8A147] relative inline-block">
               Talent
@@ -250,7 +250,7 @@ export default function WhySection() {
               <div className="absolute inset-0 rounded-[32px] pointer-events-none bg-[radial-gradient(500px_200px_at_20%_0%,rgba(212,175,55,0.08),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="z-10">
-                <h3 className="mb-2 text-xl tracking-tight text-white/90 group-hover:text-white transition-colors">
+                <h3 className="mb-2 text-xl tracking-tight text-white/90 group-hover:text-white transition-colors font-serif">
                   {card.title}
                 </h3>
                 <p className="max-w-[42ch] text-white/50 text-[14px] leading-relaxed group-hover:text-white/70 transition-colors">

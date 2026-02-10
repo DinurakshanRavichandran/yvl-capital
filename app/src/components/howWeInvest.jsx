@@ -535,7 +535,7 @@ const HowWeInvest = () => {
         
         {/* RESTORED HEADER SECTION */}
         <div className="text-center mb-24 animate-fade-up">
-          <h2 className="text-5xl md:text-6xl font-medium tracking-tight mb-6 bg-gradient-to-b from-white to-white/50 bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl font-medium tracking-tight mb-6 bg-gradient-to-b from-white to-white/50 bg-clip-text text-transparent font-serif">
             How We Invest
           </h2>
           <p className="max-w-2xl mx-auto text-white/40 text-lg font-light leading-relaxed">

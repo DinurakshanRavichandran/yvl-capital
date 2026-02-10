@@ -130,7 +130,7 @@ const CapitalOverview = () => {
             <div className="mb-2 transition-transform duration-500 group-hover:-translate-y-1">
                <span className="font-serif text-6xl text-white tracking-tighter">$50M</span>
             </div>
-            <h4 className="font-sans text-[11px] uppercase tracking-[0.3em] text-[#E8A147] font-bold mb-6">Total Committed Capital</h4>
+            <h4 className="font-serif text-[11px] uppercase tracking-[0.3em] text-[#E8A147] font-bold mb-6">Total Committed Capital</h4>
             <div className="w-full h-1 bg-white/5 relative overflow-hidden">
                <motion.div 
                  initial={{ width: 0 }}
@@ -153,7 +153,7 @@ const CapitalOverview = () => {
                <span className="font-serif text-6xl text-white tracking-tighter">18-24</span>
                <span className="font-serif text-2xl text-white/40 italic ml-2">Mo</span>
             </div>
-            <h4 className="font-sans text-[11px] uppercase tracking-[0.3em] text-[#E8A147] font-bold mb-6">Deployment Window</h4>
+            <h4 className="font-serif text-[11px] uppercase tracking-[0.3em] text-[#E8A147] font-bold mb-6">Deployment Window</h4>
             <div className="flex gap-1">
               {[...Array(12)].map((_, i) => (
                 <div key={i} className={`h-1 flex-1 ${i < 8 ? 'bg-[#E8A147]' : 'bg-white/5'}`} />
@@ -172,7 +172,7 @@ const CapitalOverview = () => {
             <div className="mb-2 transition-transform duration-500 group-hover:-translate-y-1">
                <span className="font-serif text-6xl text-white tracking-tighter">33-42</span>
             </div>
-            <h4 className="font-sans text-[11px] uppercase tracking-[0.3em] text-[#E8A147] font-bold mb-6">Target Portfolio Units</h4>
+            <h4 className="font-serif text-[11px] uppercase tracking-[0.3em] text-[#E8A147] font-bold mb-6">Target Portfolio Units</h4>
             <div className="flex items-center gap-3">
                <div className="h-1 w-1/2 bg-[#E8A147]" />
                <span className="font-sans text-[9px] text-white/20 tracking-widest">ACTIVE ACQUISITION</span>

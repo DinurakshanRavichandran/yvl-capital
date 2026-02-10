@@ -38,7 +38,7 @@ const GlobalFootprint = () => {
                   <Globe2 size={20} />
                 </div>
                 <div>
-                  <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-2">14,000+ Founders</h4>
+                  <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-2 font-serif">14,000+ Founders</h4>
                   <p className="text-white/40 text-sm leading-relaxed max-w-sm">
                     Direct sourcing through Ignyte, Sheraa, and Microsoft for Startups MENA.
                   </p>
@@ -50,7 +50,7 @@ const GlobalFootprint = () => {
                   <Link2 size={20} />
                 </div>
                 <div>
-                  <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-2">Strategic Alliances</h4>
+                  <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-2 font-serif">Strategic Alliances</h4>
                   <p className="text-white/40 text-sm leading-relaxed max-w-sm">
                     Deep integration with industrial leaders like Siemens and ADNOC to ensure day-one product-market fit.
                   </p>

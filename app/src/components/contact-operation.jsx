@@ -94,7 +94,7 @@ const OperationalAlpha = () => {
                     </div>
                   </div>
                 </div>
-                <h4 className="text-white text-sm font-bold uppercase tracking-widest mb-3">
+                <h4 className="text-white text-sm font-bold uppercase tracking-widest mb-3 font-serif">
                   {item.title}
                 </h4>
                 <p className="text-white/40 text-xs font-light leading-relaxed">

@@ -158,7 +158,7 @@ const CapitalSnapshot = () => {
           Fund Strategy
         </p>
         
-        <h2 className="text-[clamp(32px,5vw,52px)] font-medium mb-6 tracking-tight leading-tight">
+        <h2 className="text-[clamp(32px,5vw,52px)] font-medium mb-6 tracking-tight leading-tight font-serif">
           Capital Snapshot
         </h2>
 
@@ -218,7 +218,7 @@ const CapitalSnapshot = () => {
               
               <div className="w-8 h-[1px] bg-[#E8A147] mb-8 group-hover:w-16 transition-all duration-500" />
               
-              <h4 className="text-xl font-serif font-medium mb-4 text-white/90">
+              <h4 className="text-xl font-serif font-medium mb-4 text-white/90 font-serif">
                 {item.title}
               </h4>
               <p className="text-[15px] text-white/50 leading-relaxed font-light">

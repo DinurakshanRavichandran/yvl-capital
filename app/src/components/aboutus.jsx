@@ -104,7 +104,7 @@ const AboutYVL = () => {
             About Us
           </p>
 
-          <h2 className="font-medium text-[clamp(32px,5vw,56px)] leading-[1.1] tracking-tight">
+          <h2 className="font-medium text-[clamp(32px,5vw,56px)] leading-[1.1] tracking-tight font-serif">
             Building and backing{" "}
             <span className="text-[#E8A147] relative">
               AI-native

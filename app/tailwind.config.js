@@ -8,6 +8,7 @@ export default {
         hoefler: ['"Hoefler Text"', 'serif'],
         // This maps className="font-sans" to Inter
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Hoefler Text', 'Georgia', 'serif'],
       },
       colors: {
         // Optional: Adding your brand colors here makes them easier to use

@@ -58,7 +58,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-32 pb-24 px-6 overflow-hidden bg-[#02010a]">
+    <section className="relative min-h-screen flex items-center justify-center pt-32 pb-24 px-6 overflow-hidden bg-[#030210]">
       {/* 1. ATMOSPHERIC BACKGROUND */}
       <div className="absolute inset-0 pointer-events-none">
         {/* SVG Noise Texture for a tactile feel */}

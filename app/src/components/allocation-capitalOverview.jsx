@@ -71,7 +71,7 @@ const CapitalOverview = () => {
   };
 
   return (
-    <section className="relative py-40 bg-[#02010a] overflow-hidden border-t border-white/5">
+    <section className="relative py-40 bg-[#030210] overflow-hidden border-t border-white/5">
       {/* Background Technical Elements */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(232,161,71,0.05)_0%,transparent_70%)] blur-[100px]" />
@@ -120,7 +120,7 @@ const CapitalOverview = () => {
         <div className="grid lg:grid-cols-3 gap-px bg-white/10 border border-white/10 overflow-hidden mb-24">
           
           {/* Module: Total Fund */}
-          <motion.div variants={itemVariants} className="bg-[#02010a] p-12 relative group">
+          <motion.div variants={itemVariants} className="bg-[#030210] p-12 relative group">
             <div className="flex justify-between items-start mb-16">
               <div className="p-3 rounded-lg bg-[#E8A147]/5 border border-[#E8A147]/20">
                 <DollarSign size={20} className="text-[#E8A147]" />
@@ -142,7 +142,7 @@ const CapitalOverview = () => {
           </motion.div>
 
           {/* Module: Timeline */}
-          <motion.div variants={itemVariants} className="bg-[#02010a] p-12 relative group">
+          <motion.div variants={itemVariants} className="bg-[#030210] p-12 relative group">
             <div className="flex justify-between items-start mb-16">
               <div className="p-3 rounded-lg bg-[#E8A147]/5 border border-[#E8A147]/20">
                 <Rocket size={20} className="text-[#E8A147]" />
@@ -162,7 +162,7 @@ const CapitalOverview = () => {
           </motion.div>
 
           {/* Module: Targets */}
-          <motion.div variants={itemVariants} className="bg-[#02010a] p-12 relative group">
+          <motion.div variants={itemVariants} className="bg-[#030210] p-12 relative group">
             <div className="flex justify-between items-start mb-16">
               <div className="p-3 rounded-lg bg-[#E8A147]/5 border border-[#E8A147]/20">
                 <Target size={20} className="text-[#E8A147]" />

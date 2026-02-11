@@ -119,7 +119,7 @@ const investmentGates = [
 
 const InvestmentGatesSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-[#02010a] relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-[#030210] relative overflow-hidden">
       {/* Central glow to tie the grid together */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(232,161,71,0.05)_0%,transparent_60%)] pointer-events-none" />
 
@@ -153,7 +153,7 @@ const InvestmentGatesSection = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: i * 0.1 }}
-              className="group relative p-10 md:p-14 bg-[#02010a] hover:bg-white/[0.02] transition-colors duration-700"
+              className="group relative p-10 md:p-14 bg-[#030210] hover:bg-white/[0.02] transition-colors duration-700"
             >
               {/* Subtle light streak on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#E8A147]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />

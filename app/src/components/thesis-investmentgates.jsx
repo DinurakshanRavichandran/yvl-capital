@@ -119,7 +119,7 @@ const InvestmentGatesSection = () => {
   ];
 
   return (
-    <section className="py-32 md:py-48 bg-[#02010a] relative overflow-hidden">
+    <section className="py-32 md:py-48 bg-[#030210] relative overflow-hidden">
       {/* Background Decorative Element */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_-20%,#E8A14715_0%,transparent_50%)]" />
 
@@ -171,7 +171,7 @@ const InvestmentGatesSection = () => {
                 className="group relative md:pl-20"
               >
                 {/* Visual Indicator (The Dot/Icon) */}
-                <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#02010a] border border-white/10 flex items-center justify-center z-20 group-hover:border-[#E8A147] transition-colors duration-500 hidden md:flex">
+                <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#030210] border border-white/10 flex items-center justify-center z-20 group-hover:border-[#E8A147] transition-colors duration-500 hidden md:flex">
                   <div className="text-white/20 group-hover:text-[#E8A147] transition-colors">
                     {gate.icon}
                   </div>

@@ -34,7 +34,7 @@ const FounderPitchForm = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-[#02010a] flex flex-col items-center justify-center py-24 px-6 overflow-hidden z-[999]">
+    <section className="relative min-h-screen bg-[#030210] flex flex-col items-center justify-center py-24 px-6 overflow-hidden z-[999]">
       {/* Background Ambience */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-[radial-gradient(circle_at_50%_0%,_rgba(232,161,71,0.05)_0%,_transparent_70%)]" />

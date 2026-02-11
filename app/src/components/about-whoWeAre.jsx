@@ -79,7 +79,7 @@ import { Shield, Zap, Globe, Cpu } from "lucide-react";
 
 const WhoWeAreSection = () => {
   return (
-    <section className="relative py-32 bg-[#02010a] overflow-hidden">
+    <section className="relative py-32 bg-[#030210] overflow-hidden">
       {/* 1. BLUEPRINT BACKGROUND PATTERN */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:60px_60px]" />
@@ -114,7 +114,7 @@ const WhoWeAreSection = () => {
 
             {/* UPGRADED STATS CARDS */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/10 border border-white/10 rounded-sm">
-              <div className="p-8 bg-[#02010a] group hover:bg-white/[0.02] transition-colors">
+              <div className="p-8 bg-[#030210] group hover:bg-white/[0.02] transition-colors">
                 <div className="flex justify-between items-start mb-6">
                   <Cpu size={18} className="text-[#E8A147] opacity-50" />
                   <span className="text-[9px] text-white/20 font-mono">01_CAPITAL</span>
@@ -125,7 +125,7 @@ const WhoWeAreSection = () => {
                 </p>
               </div>
 
-              <div className="p-8 bg-[#02010a] group hover:bg-white/[0.02] transition-colors">
+              <div className="p-8 bg-[#030210] group hover:bg-white/[0.02] transition-colors">
                 <div className="flex justify-between items-start mb-6">
                   <Shield size={18} className="text-[#E8A147] opacity-50" />
                   <span className="text-[9px] text-white/20 font-mono">02_MODEL</span>
@@ -158,7 +158,7 @@ const WhoWeAreSection = () => {
               {/* Laser Scanning Effect */}
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#E8A147]/10 to-transparent h-1/2 w-full -translate-y-full animate-[scan_4s_linear_infinite]" />
               
-              <div className="absolute inset-0 bg-[#02010a]/40 group-hover:bg-transparent transition-colors duration-700" />
+              <div className="absolute inset-0 bg-[#030210]/40 group-hover:bg-transparent transition-colors duration-700" />
 
               {/* Visual Metadata Overlay */}
               <div className="absolute top-8 left-8 flex flex-col gap-2">
@@ -168,7 +168,7 @@ const WhoWeAreSection = () => {
                 </div>
               </div>
 
-              <div className="absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-[#02010a] to-transparent">
+              <div className="absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-[#030210] to-transparent">
                 <p className="font-serif text-2xl text-white italic leading-snug max-w-xs">
                   “We provide the architecture for those who build the physical future.”
                 </p>

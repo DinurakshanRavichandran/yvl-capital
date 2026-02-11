@@ -110,7 +110,7 @@ const supportItems = [
 
 const HowWePartnerSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-[#02010a] relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-[#030210] relative overflow-hidden">
       {/* Background Decorative Element */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-[#E8A147]/20 to-transparent" />
 
@@ -159,7 +159,7 @@ const HowWePartnerSection = () => {
               </div>
 
               {/* Icon Container - Refined Scale */}
-              <div className="w-12 h-12 mb-8 rounded-2xl bg-[#02010a] border border-white/10 flex items-center justify-center text-[#E8A147] group-hover:shadow-[0_0_20px_rgba(232,161,71,0.15)] transition-all duration-500">
+              <div className="w-12 h-12 mb-8 rounded-2xl bg-[#030210] border border-white/10 flex items-center justify-center text-[#E8A147] group-hover:shadow-[0_0_20px_rgba(232,161,71,0.15)] transition-all duration-500">
                 <item.icon className="w-5 h-5 transition-transform duration-500 group-hover:scale-110" />
               </div>
 

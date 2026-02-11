@@ -191,7 +191,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 overflow-hidden bg-[#02010a]">
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 overflow-hidden bg-[#030210]">
       
       {/* BACKGROUND ELEMENTS */}
       <div className="absolute inset-0 z-0 pointer-events-none">

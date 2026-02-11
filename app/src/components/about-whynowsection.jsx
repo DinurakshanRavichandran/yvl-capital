@@ -201,7 +201,7 @@ const WhyNowSection = () => {
   ];
 
   return (
-    <section className="relative py-24 bg-[#02010a] overflow-hidden">
+    <section className="relative py-24 bg-[#030210] overflow-hidden">
       {/* Ambient Depth */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#E8A147]/5 blur-[120px] rounded-full -translate-y-1/2 pointer-events-none" />
 
@@ -235,7 +235,7 @@ const WhyNowSection = () => {
                   transition={{ delay: i * 0.1 }}
                   className="flex gap-4 p-5 rounded-[24px] bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-all duration-500 group"
                 >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#02010a] border border-white/10 flex items-center justify-center text-[#E8A147] shadow-sm">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#030210] border border-white/10 flex items-center justify-center text-[#E8A147] shadow-sm">
                     {point.icon}
                   </div>
                   <div>
@@ -276,7 +276,7 @@ const WhyNowSection = () => {
 
                 <motion.button 
                   whileHover={{ y: -2 }}
-                  className="group px-6 py-3 bg-[#E8A147] rounded-full text-[#02010a] font-sans text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 transition-all hover:shadow-[0_8px_20px_rgba(232,161,71,0.2)]"
+                  className="group px-6 py-3 bg-[#E8A147] rounded-full text-[#030210] font-sans text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 transition-all hover:shadow-[0_8px_20px_rgba(232,161,71,0.2)]"
                 >
                   Explore the Thesis 
                   <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />

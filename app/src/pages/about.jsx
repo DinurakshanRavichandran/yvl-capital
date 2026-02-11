@@ -579,7 +579,7 @@ const SectionDivider = () => (
 
 const AboutPage = () => {
   return (
-    <main className="min-h-screen bg-[#02010a] selection:bg-[#E8A147]/30 selection:text-[#E8A147] overflow-x-hidden">
+    <main className="min-h-screen bg-[#030210] selection:bg-[#E8A147]/30 selection:text-[#E8A147] overflow-x-hidden">
       {/* Global Background Depth */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-[-5%] right-[-5%] w-[70vw] h-[70vw] bg-[#E8A147]/5 blur-[120px] rounded-full opacity-40" />

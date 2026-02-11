@@ -486,7 +486,7 @@ const HeroCoreSection = () => {
     <section 
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen flex flex-col items-center justify-start pt-48 pb-40 overflow-hidden bg-[#02010a] selection:bg-[#E8A147]/40"
+      className="relative min-h-screen flex flex-col items-center justify-start pt-48 pb-40 overflow-hidden bg-[#030210] selection:bg-[#E8A147]/40"
     >
       {/* 1. ATMOSPHERIC BACKGROUND */}
       <div className="absolute inset-0 pointer-events-none select-none">

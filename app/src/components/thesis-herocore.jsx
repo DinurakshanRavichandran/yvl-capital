@@ -444,6 +444,193 @@
 
 // export default HeroCoreSection;
 
+// import React, { useRef, useState } from "react";
+// import { motion, useScroll, useTransform } from "framer-motion";
+// import { Cpu, Activity, Terminal, Shield, Boxes, ChevronRight } from "lucide-react";
+
+// const HeroCoreSection = () => {
+//   const containerRef = useRef(null);
+//   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+//   const { scrollYProgress } = useScroll({
+//     target: containerRef,
+//     offset: ["start start", "end start"],
+//   });
+
+//   // Parallax for the "Institutional Alpha" watermark
+//   const watermarkY = useTransform(scrollYProgress, [0, 1], [0, 200]);
+
+//   const handleMouseMove = (e) => {
+//     const { clientX, clientY } = e;
+//     setMousePos({ x: clientX, y: clientY });
+//   };
+
+//   const containerVariants = {
+//     hidden: { opacity: 0 },
+//     visible: {
+//       opacity: 1,
+//       transition: { staggerChildren: 0.15, delayChildren: 0.3 },
+//     },
+//   };
+
+//   const itemVariants = {
+//     hidden: { y: 20, opacity: 0 },
+//     visible: { 
+//       y: 0, 
+//       opacity: 1, 
+//       transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } 
+//     },
+//   };
+
+//   return (
+//     <section 
+//       ref={containerRef}
+//       onMouseMove={handleMouseMove}
+//       className="relative min-h-screen flex flex-col items-center justify-start pt-48 pb-48 overflow-hidden bg-[#030210] selection:bg-[#E8A147]/40"
+//     >
+//       {/* 1. ATMOSPHERIC BACKGROUND */}
+//       <div className="absolute inset-0 pointer-events-none select-none">
+//         {/* Grain Overlay */}
+//         <div className="absolute inset-0 opacity-[0.04] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        
+//         {/* Dynamic Glow */}
+//         <motion.div 
+//           animate={{ x: mousePos.x - 400, y: mousePos.y - 400 }}
+//           transition={{ type: "spring", damping: 50, stiffness: 200 }}
+//           className="absolute w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(232,161,71,0.08)_0%,transparent_70%)] blur-[120px]"
+//         />
+
+//         {/* Structural Grid Lines */}
+//         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:40px_40px]" />
+
+//         {/* Parallax Watermark */}
+//         <motion.div 
+//           style={{ y: watermarkY }}
+//           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-serif text-[18vw] text-white/[0.02] whitespace-nowrap italic tracking-tighter"
+//         >
+//           Institutional Alpha
+//         </motion.div>
+//       </div>
+
+//       <motion.div 
+//         variants={containerVariants}
+//         initial="hidden"
+//         whileInView="visible"
+//         viewport={{ once: true }}
+//         className="relative z-10 max-w-7xl mx-auto px-8 w-full"
+//       >
+//         {/* 2. REFINED BENTO HEADER */}
+//         <motion.div variants={itemVariants} className="flex flex-col items-center mb-20">
+//           <div className="flex items-center gap-3 px-4 py-2 rounded-full border border-white/5 bg-white/[0.02] backdrop-blur-md mb-8">
+//             <span className="flex h-2 w-2 rounded-full bg-[#E8A147] animate-pulse" />
+//             <span className="font-mono text-[9px] uppercase tracking-[0.4em] text-[#E8A147] font-bold">
+//               Mandate 2.026 // System Active
+//             </span>
+//           </div>
+
+//           <h1 className="font-serif text-[clamp(40px,7vw,90px)] font-medium leading-[1.05] tracking-tight text-white text-center max-w-5xl">
+//             Autonomous Operational Control
+//             <br />
+//             <span className="italic text-[#E8A147] font-light">
+//               for Eternal Industries
+//             </span>
+//           </h1>
+
+//           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-3xl">
+//             {[
+//               { icon: <Shield size={14} />, label: "Secured", val: "Protocol v.4" },
+//               { icon: <Boxes size={14} />, label: "Focus", val: "Critical Infra" },
+//               { icon: <Activity size={14} />, label: "Yield", val: "Compound Alpha" }
+//             ].map((meta, i) => (
+//               <div key={i} className="flex flex-col items-center p-4 border border-white/5 rounded-lg bg-white/[0.01]">
+//                 <div className="text-[#E8A147]/50 mb-2">{meta.icon}</div>
+//                 <span className="text-[8px] uppercase tracking-widest text-white/30 mb-1">{meta.label}</span>
+//                 <span className="text-[10px] font-mono text-white/70 uppercase tracking-tighter">{meta.val}</span>
+//               </div>
+//             ))}
+//           </div>
+//         </motion.div>
+
+//         {/* 3. CORE VECTORS - REDESIGNED FOR "FULLNESS" */}
+//         <div className="grid lg:grid-cols-2 gap-6 mb-32">
+//           {/* Vector 01 */}
+//           <motion.div 
+//             variants={itemVariants}
+//             whileHover={{ y: -5 }}
+//             className="group relative p-12 bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden transition-all duration-500 hover:border-[#E8A147]/30"
+//           >
+//             <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#E8A147]/20 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+            
+//             <div className="flex justify-between items-start mb-12">
+//               <div className="p-4 rounded-xl bg-[#E8A147]/10 border border-[#E8A147]/20">
+//                 <Cpu className="text-[#E8A147]" size={24} strokeWidth={1.5} />
+//               </div>
+//               <span className="font-serif italic text-4xl text-white/5">01</span>
+//             </div>
+            
+//             <h3 className="font-serif text-white text-2xl mb-4 italic">Infrastructure-as-Agent</h3>
+//             <p className="font-sans text-white/40 text-base leading-relaxed font-light mb-8 max-w-sm">
+//               We back platforms that move beyond "SaaS" into systems that own the transaction. 
+//               Autonomous governance for civilization's essential throughput.
+//             </p>
+            
+//             <div className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[#E8A147]/60 group-hover:text-[#E8A147] transition-colors cursor-pointer">
+//               View Architecture <ChevronRight size={12} />
+//             </div>
+//           </motion.div>
+
+//           {/* Vector 02 */}
+//           <motion.div 
+//             variants={itemVariants}
+//             whileHover={{ y: -5 }}
+//             className="group relative p-12 bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden transition-all duration-500 hover:border-[#E8A147]/30"
+//           >
+//             <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#E8A147]/20 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+            
+//             <div className="flex justify-between items-start mb-12">
+//               <div className="p-4 rounded-xl bg-[#E8A147]/10 border border-[#E8A147]/20">
+//                 <Terminal className="text-[#E8A147]" size={24} strokeWidth={1.5} />
+//               </div>
+//               <span className="font-serif italic text-4xl text-white/5">02</span>
+//             </div>
+            
+//             <h3 className="font-serif text-white text-2xl mb-4 italic">Regulatory Embedding</h3>
+//             <p className="font-sans text-white/40 text-base leading-relaxed font-light mb-8 max-w-sm">
+//               Investing in platforms that become the regulatory and financial standard 
+//               for the legacy industries they digitize and control.
+//             </p>
+            
+//             <div className="flex gap-2">
+//               <div className="px-3 py-1 rounded-md bg-white/5 border border-white/5 font-mono text-[8px] text-white/30 group-hover:text-white/60 transition-colors uppercase tracking-widest">High Defensibility</div>
+//               <div className="px-3 py-1 rounded-md bg-white/5 border border-white/5 font-mono text-[8px] text-white/30 group-hover:text-white/60 transition-colors uppercase tracking-widest">Physical Moat</div>
+//             </div>
+//           </motion.div>
+//         </div>
+
+//         {/* 4. FINAL MANIFESTO - THE "CLOSER" */}
+//         <motion.div 
+//           variants={itemVariants}
+//           className="relative max-w-5xl mx-auto"
+//         >
+//           <div className="p-16 md:p-24 rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.03] to-transparent backdrop-blur-3xl relative overflow-hidden group">
+//             {/* Animated accent corners */}
+//             <div className="absolute top-0 left-0 w-12 h-12 border-t border-l border-[#E8A147]/40 rounded-tl-2xl transition-all group-hover:w-20 group-hover:h-20" />
+//             <div className="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-[#E8A147]/40 rounded-br-2xl transition-all group-hover:w-20 group-hover:h-20" />
+            
+//             <div className="relative z-10 text-center">
+//               <h2 className="font-serif text-3xl md:text-5xl text-white/90 leading-[1.3] max-w-3xl mx-auto italic font-light">
+//                 “YVL invests where AI is <span className="text-[#E8A147]">infrastructure</span>—controlling operations that cannot fail, in industries that will never disappear.”
+//               </h2>
+//             </div>
+//           </div>
+//         </motion.div>
+//       </motion.div>
+//     </section>
+//   );
+// };
+
+// export default HeroCoreSection;
+
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Cpu, Activity, Terminal, Shield, Boxes, ChevronRight } from "lucide-react";
@@ -486,7 +673,7 @@ const HeroCoreSection = () => {
     <section 
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen flex flex-col items-center justify-start pt-48 pb-40 overflow-hidden bg-[#030210] selection:bg-[#E8A147]/40"
+      className="relative min-h-screen flex flex-col items-center justify-start pt-32 pb-20 overflow-hidden bg-[#030210] selection:bg-[#E8A147]/40"
     >
       {/* 1. ATMOSPHERIC BACKGROUND */}
       <div className="absolute inset-0 pointer-events-none select-none">
@@ -520,7 +707,7 @@ const HeroCoreSection = () => {
         className="relative z-10 max-w-7xl mx-auto px-8 w-full"
       >
         {/* 2. REFINED BENTO HEADER */}
-        <motion.div variants={itemVariants} className="flex flex-col items-center mb-20">
+        <motion.div variants={itemVariants} className="flex flex-col items-center mb-16">
           <div className="flex items-center gap-3 px-4 py-2 rounded-full border border-white/5 bg-white/[0.02] backdrop-blur-md mb-8">
             <span className="flex h-2 w-2 rounded-full bg-[#E8A147] animate-pulse" />
             <span className="font-mono text-[9px] uppercase tracking-[0.4em] text-[#E8A147] font-bold">
@@ -551,8 +738,8 @@ const HeroCoreSection = () => {
           </div>
         </motion.div>
 
-        {/* 3. CORE VECTORS - REDESIGNED FOR "FULLNESS" */}
-        <div className="grid lg:grid-cols-2 gap-6 mb-32">
+        {/* 3. CORE VECTORS */}
+        <div className="grid lg:grid-cols-2 gap-6 mb-16">
           {/* Vector 01 */}
           <motion.div 
             variants={itemVariants}
@@ -607,20 +794,48 @@ const HeroCoreSection = () => {
           </motion.div>
         </div>
 
-        {/* 4. FINAL MANIFESTO - THE "CLOSER" */}
+        {/* 4. FINAL MANIFESTO - TWO COLUMN REDESIGN */}
         <motion.div 
           variants={itemVariants}
-          className="relative max-w-5xl mx-auto"
+          className="relative max-w-6xl mx-auto"
         >
-          <div className="p-16 md:p-24 rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.03] to-transparent backdrop-blur-3xl relative overflow-hidden group">
-            {/* Animated accent corners */}
-            <div className="absolute top-0 left-0 w-12 h-12 border-t border-l border-[#E8A147]/40 rounded-tl-2xl transition-all group-hover:w-20 group-hover:h-20" />
-            <div className="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-[#E8A147]/40 rounded-br-2xl transition-all group-hover:w-20 group-hover:h-20" />
+          <div className="relative rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-3xl overflow-hidden group">
+            {/* Background Glows for the Box */}
+            <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#E8A147]/10 blur-[80px] rounded-full" />
             
-            <div className="relative z-10 text-center">
-              <h2 className="font-serif text-3xl md:text-5xl text-white/90 leading-[1.3] max-w-3xl mx-auto italic font-light">
-                “YVL invests where AI is <span className="text-[#E8A147]">infrastructure</span>—controlling operations that cannot fail, in industries that will never disappear.”
-              </h2>
+            <div className="grid lg:grid-cols-2 items-center">
+              {/* Text Content */}
+              <div className="p-10 md:p-16 relative z-10">
+                <div className="flex items-center gap-2 mb-6">
+                  <div className="h-[1px] w-8 bg-[#E8A147]/50" />
+                  <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#E8A147]">Strategic Thesis</span>
+                </div>
+                
+                <h2 className="font-serif text-3xl md:text-4xl text-white/90 leading-tight italic font-light mb-8">
+                  “We back the systems that govern the physical world—where intelligence meets <span className="text-[#E8A147]">sovereign control</span>.”
+                </h2>
+                
+                <p className="text-white/40 text-sm leading-relaxed max-w-md font-light">
+                  YVL identifies the intersection of autonomous logic and critical throughput, 
+                  investing in the digital steel that supports global infrastructure.
+                </p>
+              </div>
+
+              {/* Image / Visual Side */}
+              <div className="relative h-full min-h-[350px] bg-white/[0.03] overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000" 
+                  alt="Modern Architectural Infrastructure"
+                  className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-40 group-hover:scale-105 group-hover:opacity-60 transition-all duration-1000"
+                />
+                
+                {/* Overlay Gradients to blend */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#030210] via-transparent to-transparent lg:block hidden" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#030210] via-transparent to-transparent lg:hidden block" />
+                
+                {/* Animated Corner accent on image */}
+                <div className="absolute bottom-6 right-6 w-12 h-12 border-b border-r border-[#E8A147]/40 rounded-br-xl" />
+              </div>
             </div>
           </div>
         </motion.div>

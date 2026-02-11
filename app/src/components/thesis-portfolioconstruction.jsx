@@ -17,7 +17,7 @@ const PortfolioConstructionSection = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-6 md:py-8">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">

@@ -28,7 +28,7 @@ const ThesisFAQSection = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 relative">
+    <section className="py-12 md:py-16 relative">
       <div className="max-w-4xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">

@@ -119,7 +119,7 @@ const InvestmentGatesSection = () => {
   ];
 
   return (
-    <section className="py-32 md:py-48 bg-[#030210] relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-[#030210] relative overflow-hidden">
       {/* Background Decorative Element */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_-20%,#E8A14715_0%,transparent_50%)]" />
 

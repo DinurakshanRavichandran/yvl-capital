@@ -101,7 +101,7 @@ const AiNativeDefinitionSection = () => {
   ];
 
   return (
-    <section className="relative py-24 md:py-40 overflow-hidden bg-[#030210]">
+    <section className="relative py-6 md:py-10 overflow-hidden bg-[#030210]">
       {/* Structural Background Detail */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
         <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-white/10 to-transparent" />

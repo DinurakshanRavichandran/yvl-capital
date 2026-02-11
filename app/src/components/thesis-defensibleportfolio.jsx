@@ -37,7 +37,7 @@ const DefensiblePortfolioSection = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 relative">
+    <section className="py-12 md:py-16 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#E8A147]/[0.02] to-transparent pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">

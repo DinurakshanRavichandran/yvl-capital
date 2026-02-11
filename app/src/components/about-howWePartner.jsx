@@ -110,7 +110,7 @@ const supportItems = [
 
 const HowWePartnerSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-[#030210] relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-[#030210] relative overflow-hidden">
       {/* Background Decorative Element */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-[#E8A147]/20 to-transparent" />
 

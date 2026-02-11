@@ -98,7 +98,7 @@ const StudioModelSection = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 relative bg-[#030210] overflow-hidden">
+    <section className="py-12 md:py-16 relative bg-[#030210] overflow-hidden">
       {/* Animated Background Glow */}
       <motion.div 
         animate={{ 

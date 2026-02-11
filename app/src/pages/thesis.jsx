@@ -655,8 +655,52 @@
 // export default ThesisPage;
 
 
-import React from "react";
+// import React from "react";
 
+// import HeroCoreSection from "../components/thesis-herocore";
+// import AiNativeDefinitionSection from "../components/thesis-ainativedefinition";
+// import InvestmentGatesSection from "../components/thesis-investmentgates";
+// import AnchorSection from "../components/thesis-anchor";
+// import WhyNowSection from "../components/thesis-whynow";
+// import DefensiblePortfolioSection from "../components/thesis-defensibleportfolio";
+// import PortfolioConstructionSection from "../components/thesis-portfolioconstruction";
+// import LongTermVisionSection from "../components/thesis-LongTermVision";
+// import VisionCTASection from "../components/thesis-visioncta";
+// import ThesisFAQSection from "../components/thesis-faq";
+
+// const ThesisPage = () => {
+//   return (
+//     <main className="min-h-screen bg-[#030210] selection:bg-[#E8A147]/30 selection:text-[#E8A147] overflow-x-hidden relative">
+//       {/* Global Background Effects */}
+//       <div className="fixed inset-0 pointer-events-none z-0">
+//         <div className="absolute top-[-5%] right-[-5%] w-[70vw] h-[70vw] bg-[#E8A147]/5 blur-[120px] rounded-full opacity-40" />
+//         <div className="absolute top-[30%] left-[-10%] w-[60vw] h-[60vw] bg-white/[0.02] blur-[150px] rounded-full" />
+//         <div className="absolute bottom-[-10%] right-[5%] w-[50vw] h-[50vw] bg-[#E8A147]/5 blur-[100px] rounded-full opacity-60" />
+//       </div>
+
+//       {/* Page Sections */}
+//       <div className="relative z-10">
+//         <HeroCoreSection />
+//         <AiNativeDefinitionSection />
+//         <InvestmentGatesSection />
+//         <AnchorSection />
+//         <WhyNowSection />
+//         <DefensiblePortfolioSection />
+//         <PortfolioConstructionSection />
+//         <LongTermVisionSection />
+//         <VisionCTASection />
+//         <ThesisFAQSection />
+//       </div>
+//     </main>
+//   );
+// };
+
+// export default ThesisPage;
+
+import React from "react";
+import { motion } from "framer-motion";
+
+// Import your components
 import HeroCoreSection from "../components/thesis-herocore";
 import AiNativeDefinitionSection from "../components/thesis-ainativedefinition";
 import InvestmentGatesSection from "../components/thesis-investmentgates";
@@ -668,29 +712,87 @@ import LongTermVisionSection from "../components/thesis-LongTermVision";
 import VisionCTASection from "../components/thesis-visioncta";
 import ThesisFAQSection from "../components/thesis-faq";
 
+/**
+ * A sophisticated divider that creates breathing room
+ * and reinforces the "Institutional" brand.
+ */
+const SectionDivider = () => (
+  <div className="py-24 md:py-32 flex justify-center items-center overflow-hidden">
+    <div className="relative flex items-center justify-center w-full max-w-4xl px-8">
+      {/* Left Line */}
+      <motion.div 
+        initial={{ scaleX: 0, originX: 1 }}
+        whileInView={{ scaleX: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.5, ease: "circOut" }}
+        className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#E8A147]/40" 
+      />
+      
+      {/* Center Pulse Node */}
+      <div className="relative flex items-center justify-center mx-4">
+        <div className="w-1.5 h-1.5 rounded-full bg-[#E8A147] shadow-[0_0_12px_#E8A147]" />
+        <motion.div 
+          animate={{ scale: [1, 2, 1], opacity: [0.5, 0, 0.5] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute w-4 h-4 rounded-full border border-[#E8A147]/30"
+        />
+      </div>
+
+      {/* Right Line */}
+      <motion.div 
+        initial={{ scaleX: 0, originX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.5, ease: "circOut" }}
+        className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#E8A147]/40" 
+      />
+    </div>
+  </div>
+);
+
 const ThesisPage = () => {
   return (
-    <main className="min-h-screen bg-[#030210] selection:bg-[#E8A147]/30 selection:text-[#E8A147] overflow-x-hidden relative">
-      {/* Global Background Effects */}
+    <main className="min-h-screen bg-[#02010a] selection:bg-[#E8A147]/30 selection:text-[#E8A147] overflow-x-hidden relative">
+      {/* 1. Global Background Effects */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-[-5%] right-[-5%] w-[70vw] h-[70vw] bg-[#E8A147]/5 blur-[120px] rounded-full opacity-40" />
         <div className="absolute top-[30%] left-[-10%] w-[60vw] h-[60vw] bg-white/[0.02] blur-[150px] rounded-full" />
-        <div className="absolute bottom-[-10%] right-[5%] w-[50vw] h-[50vw] bg-[#E8A147]/5 blur-[100px] rounded-full opacity-60" />
       </div>
 
-      {/* Page Sections */}
-      <div className="relative z-10">
+      {/* 2. Main Content Container - Constraint to max-width */}
+      <div className="relative z-10 max-w-[1440px] mx-auto">
         <HeroCoreSection />
+        
+        <SectionDivider />
         <AiNativeDefinitionSection />
+        
+        <SectionDivider />
         <InvestmentGatesSection />
+        
+        <SectionDivider />
         <AnchorSection />
+        
+        <SectionDivider />
         <WhyNowSection />
+        
+        <SectionDivider />
         <DefensiblePortfolioSection />
+        
+        <SectionDivider />
         <PortfolioConstructionSection />
+        
+        <SectionDivider />
         <LongTermVisionSection />
+        
+        <SectionDivider />
         <VisionCTASection />
+        
+        <SectionDivider />
         <ThesisFAQSection />
       </div>
+
+      {/* 3. Global Footer Padding */}
+      <div className="h-40" />
     </main>
   );
 };

@@ -24,7 +24,7 @@ const AnchorSection = () => {
   ];
 
   return (
-    <section className="py-12 md:py-16">
+    <section className="py-6 md:py-8">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">

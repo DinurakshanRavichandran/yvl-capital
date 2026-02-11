@@ -82,6 +82,151 @@
 
 // export default InvestmentGatesSection;
 
+// import React from "react";
+// import { motion } from "framer-motion";
+// import { ShieldCheck, Workflow, Landmark, Layers } from "lucide-react";
+
+// const InvestmentGatesSection = () => {
+//   const investmentGates = [
+//     {
+//       gate: "AI-Nativism",
+//       icon: <Workflow className="w-5 h-5" />,
+//       requirement: "AI must be core infrastructure for autonomous control, not a thin wrapper around legacy systems.",
+//       why: "Ensures architectural defensibility and scalability beyond simple automation.",
+//       tag: "CORE_ARCH"
+//     },
+//     {
+//       gate: "Autonomous Operational Control",
+//       icon: <ShieldCheck className="w-5 h-5" />,
+//       requirement: "The platform must make real-time decisions and actuate physical systems without human-in-the-loop micromanagement.",
+//       why: "Delivers the operational efficiency and reliability that defines our thesis.",
+//       tag: "OP_INTEL"
+//     },
+//     {
+//       gate: "Transaction Ownership",
+//       icon: <Landmark className="w-5 h-5" />,
+//       requirement: "The company must own the underlying economic transaction – commodity sales, inputs, or compliance payments.",
+//       why: "Creates direct monetization and deeper integration with customer operations.",
+//       tag: "ECON_MOAT"
+//     },
+//     {
+//       gate: "Layered Defensibility",
+//       icon: <Layers className="w-5 h-5" />,
+//       requirement: "At least two moats: physical/sensor integration plus proprietary data or regulatory lock-in.",
+//       why: "Builds compounding barriers to entry that protect margins and market position.",
+//       tag: "SEC_BARRIER"
+//     },
+//   ];
+
+//   return (
+//     <section className="py-16 md:py-24 bg-[#030210] relative overflow-hidden">
+//       {/* Background Decorative Element */}
+//       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_-20%,#E8A14715_0%,transparent_50%)]" />
+
+//       <div className="max-w-6xl mx-auto px-8 relative z-10">
+//         {/* Header */}
+//         <div className="max-w-3xl mb-32">
+//           <motion.div 
+//             initial={{ opacity: 0, x: -20 }}
+//             whileInView={{ opacity: 1, x: 0 }}
+//             viewport={{ once: true }}
+//             className="inline-flex items-center gap-3 px-3 py-1 rounded-full border border-[#E8A147]/30 bg-[#E8A147]/5 mb-6"
+//           >
+//             <div className="w-1 h-1 rounded-full bg-[#E8A147] animate-pulse" />
+//             <span className="text-[10px] uppercase tracking-[0.3em] text-[#E8A147] font-bold">Standard Protocol</span>
+//           </motion.div>
+          
+//           <motion.h2 
+//             initial={{ opacity: 0, y: 20 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             viewport={{ once: true }}
+//             className="font-serif text-[clamp(32px,5vw,64px)] text-white leading-[1.1] mb-8"
+//           >
+//             The Four <span className="italic text-[#E8A147]">Investment Gates</span>
+//           </motion.h2>
+          
+//           <motion.p 
+//             initial={{ opacity: 0 }}
+//             whileInView={{ opacity: 1 }}
+//             viewport={{ once: true }}
+//             className="text-white/40 text-lg font-light border-l border-white/10 pl-6"
+//           >
+//             Strict adherence to these gates ensures we only back platforms capable of governing the spine of civilization.
+//           </motion.p>
+//         </div>
+
+//         {/* The Gates Sequence */}
+//         <div className="relative">
+//           {/* Vertical Progress Line */}
+//           <div className="absolute left-[19px] top-0 bottom-0 w-px bg-gradient-to-b from-[#E8A147]/50 via-white/5 to-transparent hidden md:block" />
+
+//           <div className="space-y-12">
+//             {investmentGates.map((gate, index) => (
+//               <motion.div
+//                 key={index}
+//                 initial={{ opacity: 0, x: -20 }}
+//                 whileInView={{ opacity: 1, x: 0 }}
+//                 viewport={{ once: true, margin: "-100px" }}
+//                 transition={{ duration: 0.8, delay: index * 0.1 }}
+//                 className="group relative md:pl-20"
+//               >
+//                 {/* Visual Indicator (The Dot/Icon) */}
+//                 <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#030210] border border-white/10 flex items-center justify-center z-20 group-hover:border-[#E8A147] transition-colors duration-500 hidden md:flex">
+//                   <div className="text-white/20 group-hover:text-[#E8A147] transition-colors">
+//                     {gate.icon}
+//                   </div>
+//                 </div>
+
+//                 {/* The Content Card */}
+//                 <div className="relative p-8 md:p-12 rounded-sm border border-white/5 bg-gradient-to-br from-white/[0.03] to-transparent hover:border-[#E8A147]/20 transition-all duration-700">
+//                   {/* Gate Number Label */}
+//                   <div className="absolute top-0 right-0 p-4 font-mono text-[9px] text-white/10 tracking-[0.4em] uppercase">
+//                     Gate_0{index + 1} // {gate.tag}
+//                   </div>
+
+//                   <div className="grid lg:grid-cols-12 gap-8 items-center">
+//                     <div className="lg:col-span-4">
+//                       <h3 className="text-2xl font-serif text-white mb-2 italic">
+//                         {gate.gate}
+//                       </h3>
+//                       <div className="h-px w-12 bg-[#E8A147]/40 group-hover:w-full transition-all duration-1000" />
+//                     </div>
+
+//                     <div className="lg:col-span-4">
+//                       <span className="block text-[10px] uppercase tracking-widest text-[#E8A147] mb-3 font-bold opacity-60">Requirement</span>
+//                       <p className="text-white/60 font-light text-sm leading-relaxed italic">
+//                         "{gate.requirement}"
+//                       </p>
+//                     </div>
+
+//                     <div className="lg:col-span-4">
+//                       <span className="block text-[10px] uppercase tracking-widest text-white/30 mb-3 font-bold">Strategic Alpha</span>
+//                       <p className="text-white/40 font-light text-sm leading-relaxed">
+//                         {gate.why}
+//                       </p>
+//                     </div>
+//                   </div>
+                  
+//                   {/* Subtle Scanning Light Effect */}
+//                   <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+//                     <motion.div 
+//                       animate={{ y: ["-100%", "200%"] }}
+//                       transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+//                       className="w-full h-20 bg-gradient-to-b from-transparent via-[#E8A147]/5 to-transparent"
+//                     />
+//                   </div>
+//                 </div>
+//               </motion.div>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default InvestmentGatesSection;
+
 import React from "react";
 import { motion } from "framer-motion";
 import { ShieldCheck, Workflow, Landmark, Layers } from "lucide-react";
@@ -119,18 +264,18 @@ const InvestmentGatesSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#030210] relative overflow-hidden">
-      {/* Background Decorative Element */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_-20%,#E8A14715_0%,transparent_50%)]" />
+    <section className="py-20 md:py-24 bg-[#030210] relative overflow-hidden">
+      {/* Enhanced Background Decorative Element */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_-20%,#E8A14718_0%,transparent_60%)]" />
 
       <div className="max-w-6xl mx-auto px-8 relative z-10">
         {/* Header */}
-        <div className="max-w-3xl mb-32">
+        <div className="max-w-3xl mb-24">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-3 px-3 py-1 rounded-full border border-[#E8A147]/30 bg-[#E8A147]/5 mb-6"
+            className="inline-flex items-center gap-3 px-3 py-1 rounded-full border border-[#E8A147]/30 bg-[#E8A147]/10 mb-6"
           >
             <div className="w-1 h-1 rounded-full bg-[#E8A147] animate-pulse" />
             <span className="text-[10px] uppercase tracking-[0.3em] text-[#E8A147] font-bold">Standard Protocol</span>
@@ -149,7 +294,7 @@ const InvestmentGatesSection = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-white/40 text-lg font-light border-l border-white/10 pl-6"
+            className="text-white/40 text-lg font-light border-l border-[#E8A147]/30 pl-6"
           >
             Strict adherence to these gates ensures we only back platforms capable of governing the spine of civilization.
           </motion.p>
@@ -158,9 +303,9 @@ const InvestmentGatesSection = () => {
         {/* The Gates Sequence */}
         <div className="relative">
           {/* Vertical Progress Line */}
-          <div className="absolute left-[19px] top-0 bottom-0 w-px bg-gradient-to-b from-[#E8A147]/50 via-white/5 to-transparent hidden md:block" />
+          <div className="absolute left-[19px] top-0 bottom-0 w-px bg-gradient-to-b from-[#E8A147]/40 via-white/5 to-transparent hidden md:block" />
 
-          <div className="space-y-12">
+          <div className="space-y-8">
             {investmentGates.map((gate, index) => (
               <motion.div
                 key={index}
@@ -170,31 +315,32 @@ const InvestmentGatesSection = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group relative md:pl-20"
               >
-                {/* Visual Indicator (The Dot/Icon) */}
-                <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#030210] border border-white/10 flex items-center justify-center z-20 group-hover:border-[#E8A147] transition-colors duration-500 hidden md:flex">
+                {/* Visual Indicator */}
+                <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#030210] border border-white/10 flex items-center justify-center z-20 group-hover:border-[#E8A147] group-hover:shadow-[0_0_15px_rgba(232,161,71,0.3)] transition-all duration-500 hidden md:flex">
                   <div className="text-white/20 group-hover:text-[#E8A147] transition-colors">
                     {gate.icon}
                   </div>
                 </div>
 
-                {/* The Content Card */}
-                <div className="relative p-8 md:p-12 rounded-sm border border-white/5 bg-gradient-to-br from-white/[0.03] to-transparent hover:border-[#E8A147]/20 transition-all duration-700">
-                  {/* Gate Number Label */}
-                  <div className="absolute top-0 right-0 p-4 font-mono text-[9px] text-white/10 tracking-[0.4em] uppercase">
+                {/* The Content Card - Glassmorphism Updated */}
+                <div className="relative p-8 md:p-12 rounded-xl border border-[#E8A147]/10 bg-gradient-to-br from-white/[0.05] via-[#E8A147]/[0.02] to-transparent backdrop-blur-md hover:border-[#E8A147]/40 transition-all duration-700 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]">
+                  
+                  {/* Gate Number Label - Gold Accent */}
+                  <div className="absolute top-0 right-0 p-4 font-mono text-[9px] text-[#E8A147]/40 tracking-[0.4em] uppercase group-hover:text-[#E8A147] transition-colors">
                     Gate_0{index + 1} // {gate.tag}
                   </div>
 
                   <div className="grid lg:grid-cols-12 gap-8 items-center">
                     <div className="lg:col-span-4">
-                      <h3 className="text-2xl font-serif text-white mb-2 italic">
+                      <h3 className="text-2xl font-serif text-white mb-2 italic tracking-tight">
                         {gate.gate}
                       </h3>
-                      <div className="h-px w-12 bg-[#E8A147]/40 group-hover:w-full transition-all duration-1000" />
+                      <div className="h-px w-12 bg-[#E8A147]/40 group-hover:w-3/4 transition-all duration-1000" />
                     </div>
 
                     <div className="lg:col-span-4">
-                      <span className="block text-[10px] uppercase tracking-widest text-[#E8A147] mb-3 font-bold opacity-60">Requirement</span>
-                      <p className="text-white/60 font-light text-sm leading-relaxed italic">
+                      <span className="block text-[10px] uppercase tracking-widest text-[#E8A147] mb-3 font-bold opacity-80">Requirement</span>
+                      <p className="text-white/70 font-light text-sm leading-relaxed italic">
                         "{gate.requirement}"
                       </p>
                     </div>
@@ -207,12 +353,12 @@ const InvestmentGatesSection = () => {
                     </div>
                   </div>
                   
-                  {/* Subtle Scanning Light Effect */}
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+                  {/* Gold Scanning Light Effect */}
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity rounded-xl">
                     <motion.div 
                       animate={{ y: ["-100%", "200%"] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                      className="w-full h-20 bg-gradient-to-b from-transparent via-[#E8A147]/5 to-transparent"
+                      transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                      className="w-full h-32 bg-gradient-to-b from-transparent via-[#E8A147]/10 to-transparent"
                     />
                   </div>
                 </div>

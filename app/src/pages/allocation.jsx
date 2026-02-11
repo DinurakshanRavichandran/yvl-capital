@@ -835,7 +835,60 @@
 
 // export default AllocationPage;
 
+// import React from "react";
+// import CapitalOverview from "../components/allocation-capitalOverview";
+// import FundBreakdown from "../components/allocation-fundbreakdown";
+// import StudioTrack from "../components/allocation-studiotrack";
+// import ExternalTrack from "../components/allocation-externaltrack";
+// import ReservesSupport from "../components/allocation-reservesSuport";
+// import AllocationPrinciples from "../components/allocation-principles";
+// import ExpectedReturns from "../components/allocation-expectedreturns";
+// import WhyItWorks from "../components/allocation-whyitworks";
+// import PortfolioConstruction from "../components/allocation-portfolioconstruction";
+// import ForLPsAndFounders from "../components/allocation-frlpsfounders";
+
+// const AllocationPage = () => {
+//   return (
+//     <main className="bg-[#030210] text-white">
+//       {/* Capital Overview Section */}
+//       <CapitalOverview />
+
+//       {/* Fund Breakdown */}
+//       <FundBreakdown />
+
+//       {/* Studio Track */}
+//       <StudioTrack />
+
+//       {/* External Track */}
+//       <ExternalTrack />
+
+//       {/* Reserves & Support */}
+//       <ReservesSupport />
+
+//       {/* Allocation Principles */}
+//       <AllocationPrinciples />
+
+//       {/* Expected Returns */}
+//       <ExpectedReturns />
+
+//       {/* Why It Works */}
+//       <WhyItWorks />
+
+//       {/* Portfolio Construction */}
+//       <PortfolioConstruction />
+
+//       {/* LPs & Founders CTA */}
+//       <ForLPsAndFounders />
+//     </main>
+//   );
+// };
+
+// export default AllocationPage;
+
 import React from "react";
+import { motion } from "framer-motion";
+
+// Component Imports
 import CapitalOverview from "../components/allocation-capitalOverview";
 import FundBreakdown from "../components/allocation-fundbreakdown";
 import StudioTrack from "../components/allocation-studiotrack";
@@ -847,37 +900,74 @@ import WhyItWorks from "../components/allocation-whyitworks";
 import PortfolioConstruction from "../components/allocation-portfolioconstruction";
 import ForLPsAndFounders from "../components/allocation-frlpsfounders";
 
+/**
+ * GoldDivider: A high-fidelity animated separator.
+ * Designed to be zero-height to respect existing component spacing.
+ */
+const GoldDivider = () => (
+  <div className="w-full flex justify-center px-8 relative z-20 pointer-events-none">
+    <div className="max-w-7xl w-full relative flex justify-center">
+      {/* Central Line */}
+      <motion.div 
+        initial={{ width: "0%", opacity: 0 }}
+        whileInView={{ width: "100%", opacity: 1 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
+        className="h-[1px] bg-gradient-to-r from-transparent via-[#E8A147]/40 to-transparent"
+      />
+      
+      {/* Subtle Glow Underlay */}
+      <motion.div 
+        initial={{ width: "0%", opacity: 0 }}
+        whileInView={{ width: "80%", opacity: 1 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+        className="absolute -top-[1px] h-[3px] bg-[#E8A147]/10 blur-[4px] rounded-full"
+      />
+    </div>
+  </div>
+);
+
 const AllocationPage = () => {
   return (
-    <main className="bg-[#030210] text-white">
-      {/* Capital Overview Section */}
+    <main className="bg-[#030210] text-white overflow-x-hidden">
+      {/* 01. Capital Overview Section */}
       <CapitalOverview />
+      <GoldDivider />
 
-      {/* Fund Breakdown */}
+      {/* 02. Fund Breakdown */}
       <FundBreakdown />
+      <GoldDivider />
 
-      {/* Studio Track */}
+      {/* 03. Studio Track */}
       <StudioTrack />
+      <GoldDivider />
 
-      {/* External Track */}
+      {/* 04. External Track */}
       <ExternalTrack />
+      <GoldDivider />
 
-      {/* Reserves & Support */}
+      {/* 05. Reserves & Support */}
       <ReservesSupport />
+      <GoldDivider />
 
-      {/* Allocation Principles */}
+      {/* 06. Allocation Principles */}
       <AllocationPrinciples />
+      <GoldDivider />
 
-      {/* Expected Returns */}
+      {/* 07. Expected Returns */}
       <ExpectedReturns />
+      <GoldDivider />
 
-      {/* Why It Works */}
+      {/* 08. Why It Works */}
       <WhyItWorks />
+      <GoldDivider />
 
-      {/* Portfolio Construction */}
+      {/* 09. Portfolio Construction */}
       <PortfolioConstruction />
+      <GoldDivider />
 
-      {/* LPs & Founders CTA */}
+      {/* 10. LPs & Founders CTA */}
       <ForLPsAndFounders />
     </main>
   );

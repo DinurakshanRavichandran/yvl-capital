@@ -8,7 +8,7 @@ const VisionCTASection = () => {
   return (
     <section className="py-32 relative">
       {/* Divider Line */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-px bg-gradient-to-r from-transparent via-[#E8A147]/30 to-transparent" />
+      {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-px bg-gradient-to-r from-transparent via-[#E8A147]/30 to-transparent" /> */}
 
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="font-serif text-[clamp(32px,5vw,56px)] font-medium leading-[1.1] tracking-tight text-white mb-8">

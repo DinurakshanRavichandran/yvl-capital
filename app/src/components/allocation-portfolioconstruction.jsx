@@ -89,7 +89,7 @@ const PortfolioConstruction = () => {
   ];
 
   return (
-    <section className="relative py-32 bg-[#02010a] overflow-hidden">
+    <section className="relative py-32 bg-[#030210] overflow-hidden">
       {/* Structural Background */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[repeating-linear-gradient(90deg,transparent,transparent_100px,white_101px)]" />
@@ -128,7 +128,7 @@ const PortfolioConstruction = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.8 }}
-              className="group relative bg-[#02010a] p-8 min-h-[400px] flex flex-col justify-between hover:bg-white/[0.02] transition-colors duration-500"
+              className="group relative bg-[#030210] p-8 min-h-[400px] flex flex-col justify-between hover:bg-white/[0.02] transition-colors duration-500"
             >
               {/* Top Meta */}
               <div>

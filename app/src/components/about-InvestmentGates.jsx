@@ -119,7 +119,7 @@ const investmentGates = [
 
 const InvestmentGatesSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-[#030210] relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-[#030210] relative overflow-hidden">
       {/* Central glow to tie the grid together */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(232,161,71,0.05)_0%,transparent_60%)] pointer-events-none" />
 

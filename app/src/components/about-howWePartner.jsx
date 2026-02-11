@@ -112,7 +112,7 @@ const HowWePartnerSection = () => {
   return (
     <section className="py-12 md:py-16 bg-[#030210] relative overflow-hidden">
       {/* Background Decorative Element */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-[#E8A147]/20 to-transparent" />
+      {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-[#E8A147]/20 to-transparent" /> */}
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         

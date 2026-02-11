@@ -682,7 +682,60 @@
 // export default StudioPage;
 
 
+// import React from "react";
+
+// // Import all modular components
+// import HeroSection from "../components/studio-hero";
+// import StudioOverview from "../components/studio-overview";
+// import StudioTracks from "../components/studio-tracks";
+// import StudioProcess from "../components/studio-process";
+// import FounderBenefits from "../components/studio-founderbenefits";
+// import ValueProposition from "../components/studio-valueproposition";
+// import ExpectedOutcomes from "../components/studio-expectedOutcomes";
+// import IdealCandidates from "../components/studio-idealcandidates";
+// import CTASection from "../components/studio-cta";
+// import FAQSection from "../components/studio-faq";
+
+// const StudioPage = () => {
+//   return (
+//     <main className="min-h-screen bg-[#030210] selection:bg-[#E8A147]/30 selection:text-[#E8A147] overflow-x-hidden">
+//       {/* Hero Section */}
+//       <HeroSection />
+
+//       {/* Studio Overview */}
+//       <StudioOverview />
+
+//       {/* Studio Tracks */}
+//       <StudioTracks />
+
+//       {/* Studio Process */}
+//       <StudioProcess />
+
+//       {/* Founder Benefits */}
+//       <FounderBenefits />
+
+//       {/* Value Proposition */}
+//       <ValueProposition />
+
+//       {/* Expected Outcomes */}
+//       <ExpectedOutcomes />
+
+//       {/* Ideal Candidates */}
+//       <IdealCandidates />
+
+//       {/* CTA Section */}
+//       <CTASection />
+
+//       {/* FAQ Section */}
+//       <FAQSection />
+//     </main>
+//   );
+// };
+
+// export default StudioPage;
+
 import React from "react";
+import { motion } from "framer-motion";
 
 // Import all modular components
 import HeroSection from "../components/studio-hero";
@@ -696,37 +749,73 @@ import IdealCandidates from "../components/studio-idealcandidates";
 import CTASection from "../components/studio-cta";
 import FAQSection from "../components/studio-faq";
 
+/**
+ * GoldDivider: Features a central pulse-dot and 
+ * bi-directional line expansion.
+ */
+const GoldDivider = () => (
+  <div className="w-full flex justify-center items-center relative h-0 z-20 pointer-events-none">
+    {/* Central Dot */}
+    <motion.div
+      initial={{ scale: 0, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="absolute w-1.5 h-1.5 rounded-full bg-[#E8A147] shadow-[0_0_10px_#E8A147]"
+    />
+
+    {/* Expanding Lines */}
+    <div className="max-w-7xl w-full flex justify-center items-center">
+      <motion.div
+        initial={{ width: "0%", opacity: 0 }}
+        whileInView={{ width: "100%", opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        className="h-[1px] bg-gradient-to-r from-transparent via-[#E8A147]/40 to-transparent"
+      />
+    </div>
+
+    {/* Secondary Glow Flare */}
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 2, delay: 0.5 }}
+      className="absolute w-64 h-[1px] bg-[#E8A147]/20 blur-sm"
+    />
+  </div>
+);
+
 const StudioPage = () => {
   return (
     <main className="min-h-screen bg-[#030210] selection:bg-[#E8A147]/30 selection:text-[#E8A147] overflow-x-hidden">
-      {/* Hero Section */}
       <HeroSection />
+      <GoldDivider />
 
-      {/* Studio Overview */}
       <StudioOverview />
+      <GoldDivider />
 
-      {/* Studio Tracks */}
       <StudioTracks />
+      <GoldDivider />
 
-      {/* Studio Process */}
       <StudioProcess />
+      <GoldDivider />
 
-      {/* Founder Benefits */}
       <FounderBenefits />
+      <GoldDivider />
 
-      {/* Value Proposition */}
       <ValueProposition />
+      <GoldDivider />
 
-      {/* Expected Outcomes */}
       <ExpectedOutcomes />
+      <GoldDivider />
 
-      {/* Ideal Candidates */}
       <IdealCandidates />
+      <GoldDivider />
 
-      {/* CTA Section */}
       <CTASection />
+      <GoldDivider />
 
-      {/* FAQ Section */}
       <FAQSection />
     </main>
   );

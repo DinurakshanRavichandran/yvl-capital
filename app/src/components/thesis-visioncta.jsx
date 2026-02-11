@@ -6,7 +6,7 @@ const VisionCTASection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-32 relative">
+    <section className="py-16 relative">
       {/* Divider Line */}
       {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-px bg-gradient-to-r from-transparent via-[#E8A147]/30 to-transparent" /> */}
 

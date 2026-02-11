@@ -94,7 +94,7 @@ const AnchorSection = () => {
   };
 
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden bg-[#030210]">
+    <section className="py-12 md:py-16 relative overflow-hidden bg-[#030210]">
       {/* Dynamic Background Glow */}
       <motion.div 
         animate={{ 

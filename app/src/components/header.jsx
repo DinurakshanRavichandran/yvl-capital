@@ -130,7 +130,7 @@ const Header = () => {
               {/* Center-out Gradient Underline Animation */}
               <span
                 className={`absolute bottom-1 left-1/2 -translate-x-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#E8A147] to-transparent transition-all duration-500 ${
-                  isLinkActive(link) ? "w-full" : "w-0 group-hover:w-full"
+                  isLinkActive(link) ? "w-0 group-hover:w-full" : "w-0 group-hover:w-full"
                 }`}
               />
             </a>

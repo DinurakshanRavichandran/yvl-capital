@@ -8,6 +8,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+ 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +33,6 @@ const Header = () => {
     if (link.type === "hash") {
       e.preventDefault();
       setIsMobileMenuOpen(false);
-      
       if (location.pathname !== "/") {
         navigate("/");
         setTimeout(() => {
@@ -55,6 +55,19 @@ const Header = () => {
     }
   };
 
+  const isLinkActive = (link) => {
+    if (link.type === "route") {
+      return location.pathname === link.href;
+    }
+    if (link.type === "hash") {
+      if (link.href === "#home") {
+        return location.pathname === "/";
+      }
+      return location.pathname === "/" && window.location.hash === link.href;
+    }
+
+    return false;
+  };
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -108,11 +121,18 @@ const Header = () => {
               key={link.name}
               href={link.href}
               onClick={(e) => handleNavClick(e, link)}
-              className="relative px-4 py-2 text-[11px] font-bold uppercase tracking-[0.25em] text-white/40 hover:text-[#E8A147] transition-all duration-300 group"
-            >
+              className={`relative px-4 py-2 text-[11px] font-bold uppercase tracking-[0.25em] transition-all duration-300 group ${
+                isLinkActive(link)
+                  ? "text-[#E8A147]"
+                  : "text-white/40 hover:text-[#E8A147]"
+              }`}>
               {link.name}
               {/* Center-out Gradient Underline Animation */}
-              <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-gradient-to-r from-transparent via-[#E8A147] to-transparent group-hover:w-full transition-all duration-500" />
+              <span
+                className={`absolute bottom-1 left-1/2 -translate-x-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#E8A147] to-transparent transition-all duration-500 ${
+                  isLinkActive(link) ? "w-full" : "w-0 group-hover:w-full"
+                }`}
+              />
             </a>
           ))}
         </nav>
@@ -161,7 +181,11 @@ const Header = () => {
               key={link.name}
               href={link.href}
               onClick={(e) => handleNavClick(e, link)}
-              className="text-[12px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-[#E8A147] transition-colors duration-300"
+              className={`text-[12px] font-bold uppercase tracking-[0.3em] transition-colors duration-300 ${
+                isLinkActive(link)
+                  ? "text-[#E8A147]"
+                  : "text-white/40 hover:text-[#E8A147]"
+              }`}
             >
               {link.name}
             </a>
